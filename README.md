@@ -8,7 +8,9 @@ If you build a piano, please share about it in the *Show & Tell* Discussions of 
 
 ## How to Build A Hybrid Piano
 
-Follow the instructions and links in this repository, starting here: (coming soon..)
+Follow the instructions and links in this repository, starting here:
+
+[documentation/README.md](documentation/README.md)
 
 ## Stem Piano Overview
 
