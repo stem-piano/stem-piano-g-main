@@ -36,7 +36,7 @@ Four board options:
 
 * Option #1 - The board with a trimming resistor. This board is more expensive but gives greater control over note accuracy. Before installing HPS in a piano, adjust each trimming resistor so the output voltage matches the ADC reference voltage when at maximum value. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07/hps07_gerber
 
-* Option #2 - The board without a trimming resistor. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07/hps04_gerber
+* Option #2 - The board without a trimming resistor. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps04/hps04_gerber
 
 * Option #3 - Any sensor board that meets the interface specification will work. However, the instructions in this file are for an HPS board.
 

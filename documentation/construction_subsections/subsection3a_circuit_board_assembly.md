@@ -68,6 +68,7 @@ Top side of HPS 0.8 with components installed:
 ![](../pictures/hps08_top.jpg)
 
 Bottom side of HPS 0.8 with components installed:
+
 ![](../pictures/hps08_bottom.jpg)
 
 Notice the orientation of the CNY-70. The "CNY-70" marking area on the CNY-70 is on the same side as the "cny-70" label on the HPS circuit board.
