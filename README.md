@@ -1,22 +1,36 @@
-# Stem Piano - Model G
+# Stem Piano G
 
-*Stem Pianos* are open Source hybrid MIDI digital pianos.
+*Stem Pianos* are open source hybrid MIDI digital pianos.
 
-The Model G version is a single-board, relatively simple, piano.
+The Model G version is the first completed piano.
 
-If you build a piano, please share about it in the *Show & Tell* Discussions of this repository.
+If you build a piano, please share about it in the *Show & Tell* Discussions.
 
-## How to Build A Hybrid Piano
+## How to Build A Hybrid MIDI Piano
 
-Follow the instructions and links in this repository, starting here:
+Start here: [documentation/README.md](documentation/README.md)
 
-[documentation/README.md](documentation/README.md)
+Documentation includes links to the firmware, software, and hardware source files.
+
+(for now, these files are located at the original *DIY-Grand-Digital-Piano* repository: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main)
 
 ## Stem Piano Overview
 
-See: [DIY-Grand-Digital-Piano: README](https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/README.md) file in the *DIY-Grand-Digital-Piano* repository.
+The following is from the *README.md* file in the *DIY-Grand-Digital-Piano* repository:
 
-## Stem Piano Model G Features
+*A hybrid piano combines the physical action of an acoustic piano with MIDI, sound generation, and other features of a digital keyboard. Some piano manufacturers sell hybrid pianos.*
+
+*This project ("stem piano") is an open-source hybrid digital piano.*
+
+*The qualifier digital is important. It means that signals are sampled with an analog-to-digital converter (ADC) and then all processing is with a microprocessor. Therefore, once the hardware is installed all algorithms, improvements, and new features are with software or firmware.*
+
+*The repository includes schematics, printed circuit board layouts, firmware source files for the real-time processing, optional software source files for Ethernet connected features, and lists of required hardware components.*
+
+*A physical piano action, or other instrument, is required. The electronics and code (stem piano) will work with a grand or upright piano action. Mechanical suggestions are included but not detailed mechanical instructions.*
+
+*The platform and code could also adapt to building a range of other unique and innovative musical instruments.*
+
+## Features
 
 * Works on grand and upright pianos.
 * Works with the action separate from the piano or as a silent system in a full piano.
@@ -30,18 +44,10 @@ See: [DIY-Grand-Digital-Piano: README](https://github.com/gzweigle/DIY-Grand-Dig
 * Optional 2.8" TFT display for configuration, status, and debug.
 * 4x2 switches for eight configuration options.
 
-## Video Documentation
+## Links
 
-Please see [DIY-Grand-Digital-Piano: YouTube Posts](https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/documentation/video_documentation.md) for historical, how-to, and other documentation in video form. Not all is relevant but some videos could be helpful when building a piano.
-
-## Warnings
-Please see the [DIY-Grand-Digital-Piano: WARNINGS](https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md) file in the *DIY-Grand-Digital-Piano* repository.
-
-## Troubleshooting
-Please see the [DIY-Grand-Digital-Piano: HELP](https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md) file in the *DIY-Grand-Digital-Piano* repository.
-
-## Locations
-
-This *Stem Piano G* repository is for the instructions and links to build a piano.
-
-The links in this *Stem Piano G* repository point to hardware, software, firmware, and mechanical locations in the original repository: https://github.com/gzweigle/DIY-Grand-Digital-Piano.
+This repository includes links to:
+* Documentation in this repository.
+* Files in the original project repository. https://github.com/gzweigle/DIY-Grand-Digital-Piano.
+* *Stem Piano* historical progress videos. https://www.youtube.com/@gzpiano88.
+* External manufacturer web sites.
