@@ -50,11 +50,13 @@ The pin headers are on the bottom of the board. The headers are for connecting t
 
 88 boards are required.
 
-Parts file without an adjustable resistor and using surface mount components. Recommended. Link: (coming soon).
+HPS 0.8 - Parts file without an adjustable resistor and using surface mount components. Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps08
 
-Parts File with an adjustable resistor and using surface mount components: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07.
+HPS 0.7 - Parts File with an adjustable resistor and using surface mount components. Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07.
 
-Parts File without an adjustable resistor and using through-hole components: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps04
+HPS 0.4 - Parts File without an adjustable resistor and using through-hole components. Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps04
+
+HPS 0.8 is recommended for normal use cases.
 
 Make sure the CNY-70 and pin headers are oriented properly with respect to top and bottom of the boards. See *stem piano* video https://youtu.be/C9174TC4kLs?t=162.
 

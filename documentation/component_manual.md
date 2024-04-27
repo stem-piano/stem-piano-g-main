@@ -90,7 +90,7 @@ One SCA board per IPS board. For example, one SCA and one IPS together support 8
 Four options:
 
 (1) HPS 0.8
-* Link: (*COMING SOON*)
+* Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps08
 * This is the recommended sensor circuit board.
 * Surface mount
 * No trimmer resistor

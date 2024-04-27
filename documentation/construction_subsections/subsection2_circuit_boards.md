@@ -32,7 +32,7 @@ Before building the boards, please read the HPS design document https://github.c
 
 Four board options:
 
-* Option #0 (recommended) - The surface mount board without trimming resistor. Location: *coming soon*.
+* Option #0 (recommended) - The surface mount board without trimming resistor. Location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps08
 
 * Option #1 - The board with a trimming resistor. This board is more expensive but gives greater control over note accuracy. Before installing HPS in a piano, adjust each trimming resistor so the output voltage matches the ADC reference voltage when at maximum value. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07/hps07_gerber
 
