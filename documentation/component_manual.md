@@ -10,12 +10,14 @@ Component links in documentation below are to the original project repository: h
 
 This section overviews the major components. Links to code and hardware are provided in subsequent details sections.
 
-### 2 - Processing printed circuit boards (PCB).
-* The mainboard. Name is the IPS for Integrated Processing System. *Stem Piano* uses version 2.0 of the IPS mainboard.
+### 1 - Mainboard
+Name is the IPS for Integrated Processing System. *Stem Piano* uses version 2.0 of the IPS mainboard.
 
 ![](diagrams/ips20.png)
 
-* Data acquisition board. Name is the SCA for Six Channel Analog. The data acquisition board removably attaches to the mainboard. *Stem Piano* uses version 0.0 of the SCA data acquisition board.
+### 1 - Data acquisition board
+
+Name is the SCA for Six Channel Analog. The data acquisition board removably attaches to the mainboard. *Stem Piano* uses version 0.0 of the SCA data acquisition board.
 
 ![](diagrams/sca00.png)
 
