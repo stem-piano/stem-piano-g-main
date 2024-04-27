@@ -10,10 +10,6 @@ If you build a piano, please share about it in the *Show & Tell* Discussions.
 
 Start here: [documentation/README.md](documentation/README.md)
 
-Documentation includes links to the firmware, software, and hardware source files.
-
-(for now, these files are located at the original *DIY-Grand-Digital-Piano* repository: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main)
-
 ## Stem Piano Overview
 
 The following is from the *README.md* file in the *DIY-Grand-Digital-Piano* repository:
