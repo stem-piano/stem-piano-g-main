@@ -51,7 +51,7 @@ When the CNY-70 on the HPS PCB is close to the paper, the multimeter DC voltage 
 When the CNY-70 is a large distance from the paper, the multimeter DC voltage display should show a value close to 0 volts.
 
 Acceptable ranges:
-* For the larger voltage (small distance), anything between 2.25 volts and 2.5 volts is ok.
+* For the larger voltage (small distance), anything between 1.5 volts and 2.5 volts is ok.
 * For the smaller voltage (large distance), anything between 0 volts and 0.3 volts is ok.
 
 Not all CNY-70 sensors are the same. Some will have larger voltages during the test and some will have smaller voltages during the test. This is expected and is ok.
@@ -60,7 +60,7 @@ Not all CNY-70 sensors are the same. Some will have larger voltages during the t
 
 If some of the smaller voltages (large distance) for measured HPS sensors are too large, it could require changing the damper threshold in settings. See the *Firmware Manual* for instruction on changing settings [./firmware_manual.md](./firmware_manual.md).
 
-## What if the larger voltage (small distance) is below 2.25 volts?
+## What if the larger voltage (small distance) is below 1.5 volts?
 
 If some of the maximum voltages (small distance) for measured HPS sensors are too small, it could require changing the settings threshold in settings. See the *Firmware Manual* for instruction on changing settings [./firmware_manual.md](./firmware_manual.md).
 

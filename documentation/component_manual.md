@@ -124,7 +124,7 @@ Four options:
 
 (4) Any sensor that meets interface requirements.
 * The sensor boards must output an analog value in range [0, ..., 2.5] volts when the hammer or damper is furthest-from and closest-to the sensor respectively.
-* It is ok to send a value less than 2.5 V, such as 2.3 V or even lower. Lower voltages could require adjusting the settings in settings file.
+* It is ok to send a value less than 2.5 V. As low as 1.5 V should work. Lower voltages could require adjusting the settings in settings file.
 * See the following file for a detailed explanation: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/design/hps_cny70
 * The maximum allowable current draw of each sensor board is 15 mA.
 
