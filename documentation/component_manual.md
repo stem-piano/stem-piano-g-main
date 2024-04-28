@@ -93,7 +93,7 @@ One SCA board per IPS board. For example, one SCA and one IPS together support 8
 
 ### Hammer Position Sensor (HPS) Boards
 
-Four options:
+Four options as listed below. It is ok to use multiple sensor versions in the same piano.
 
 (1) HPS 0.8
 * Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps08
