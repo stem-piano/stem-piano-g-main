@@ -113,6 +113,7 @@ Four options as listed below. It is ok to use multiple sensor versions in the sa
 * Disadvantages:
     * More expensive.
     * Adjusting the trimming resistor is time consuming and difficult to set accurately.
+    * The absolute maximum allowed current of an HPS is 15 mA. When adjusting the trimmer, must measure the current to make sure that it never exceeds 15 mA. The HPS 0.7 documentation (see link above) includes an example of test results for an HPS 0.7. The test results include current as function of trimmer resistor position for a randomly selected CNY-70. These test results indicate that when the trimmer in its default position (100 ohms), the current is in the 12 mA range. Increasing the resistance (lowering the output voltage) decreases the current.
 
 (3) HPS 0.4
 * Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps04
