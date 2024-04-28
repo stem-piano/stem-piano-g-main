@@ -30,6 +30,10 @@ The quick start setup does not include an Ethernet connection or TFT display opt
 
 9. Play piano!
 
+## Teensy USB
+
+During normal operation, the Teensy USB is not required and should not be connected. See [./firmware_downloading](./firmware_downloading.md) for information on the USB cable.
+
 ## Configuration Switches
 
 Move switch position with a thin wood or plastic utensil. Use something nonconductive.
@@ -120,9 +124,48 @@ When sca_sw2_position2 switch is ON, the calibration values are frozen and do no
 
 The best approach for calibration is to power up the piano, turn ON sca_sw2_position1 then turn OFF sca_sw2_position1. This ensures old values are deleted. Then firmly play each piano note once. Then, turn ON sca_sw2_position2 to freeze those values.
 
-## If Add A Damper Board
+## Front LEDs / Test Points
 
-The damper board sensors measure the back of each piano key.
+At the front of the piano, next to the Teensy, are four LEDs. Each LED is electrically connected to a test point. The firmware drives with a Teensy pin. Here is the functionality, using names from figure above:
+
+### processing
+
+This test point is high during Teensy main loop processing. The rate is very high and so the LED may be solidly or dimly illuminated. Can monitor with an oscilloscope for debug.
+
+### damper
+
+This LED is ON when any damper is raised by pressing and holding a piano key.
+
+Normally this LED is OFF when no piano keys are pressed. If LED is ON when no piano keys are pressed, this indicates:
+* the *damper_threshold_using_damper* or *damper_threshold_using_hammer* setting is incorrect or
+* there is a sensor problem or
+* not all notes have calibration values (in this case the calibration LED is flashing quickly).
+
+### strike
+
+This LED is ON when any one of the hammers is close to the string. When a single piano key is pressed quickly, this LED should be briefly ON.
+
+Normally this LED is OFF when no piano keys are pressed. If LED is ON when no piano keys are pressed, this indicates a sensor problem or not all notes have calibration values.
+
+### sustain
+
+This LED is ON when any of the pedals is pressed. Probably should be called 'pedal' and not 'sustain'.
+
+## Other LEDs
+
+There are two LEDs under the SCA and two on the Ethernet connector.
+
+The SCA LEDs flash at a fixed rate. They are available for firmware customization.
+
+One Ethernet LED flashes when data is transferred. The other flashes at a fixed rate and is available for firmware customization.
+
+## Serial Monitor
+
+Multiple categories of information is displayed through the Arduino serial monitor. See firmware code for details.
+
+## If Add A Damper Board (optional)
+
+The optional damper board and damper sensors measure the back of each piano key. If not using a damper board, the damper positions are estimated from the hammer positions.
 
 The MIDI connection on damper board is not used. All MIDI data is through the hammer board.
 
@@ -131,6 +174,8 @@ The damper board requires a separate +5 volt input connection.
 The damper board Teensy processor is programmed separately from the hammer board Teensy processor.
 
 The damper board has its own 2.8 inch TFT display.
+
+The configuration switches, LEDs, and test points are different on the damper IPS, compared to the hammer IPS.
 
 ## Caring for Stem Piano
 
@@ -150,10 +195,10 @@ You have an open source piano and can add any features and be as creative as you
 
 See the firmware/software manual for details on firmware and firmware settings: [./firmware_manual.md](./firmware_manual.md)
 
-## Important resources
-
-* Help if things don't work: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md
+## Important Resources
 
 * Important things to be aware of: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
+
+* Help if things don't work: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md
 
 * Active problems, bugs, and lists of future enhancements: https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues
