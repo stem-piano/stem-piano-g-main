@@ -14,7 +14,7 @@ Most parts are listed with part numbers in the parts files list below. Some part
 
 For the LEDs, select a type/color and add the part number. For the other parts, work with the board assembly manufacturer or purchase and send to the manufacturer.
 
-For resistors and capacitors, it is ok to substitute reasonably close, or better, equivalents.
+For resistors and capacitors, it is probably ok to substitute reasonably close, or better, equivalents. Make sure to check the associated integrated circuit data sheet.
 
 ## Select a manufacturer to install the components
 
@@ -39,6 +39,12 @@ Ethernet is optional. If using Ethernet:
 ## Solder parts on the SCA board
 
 Parts File: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/sca00
+
+In the following figure only a two-wide connector under J4 was used, not a three-wide. Note the associated header in IPS picture above. This means that the ground pin on J4 is not connected. This was because the SCA board has two ground points, one on J4 and one on J1. For this board, the ground on J1 is sufficient and provides a single ground return point.
+
+Also, J5 and J6 are optional support pins. These were not needed and not soldered into place on this board.
+
+At the upper right is a screw hole for an optional mounting screw.
 
 ![](../pictures/sca_with_parts.jpg)
 
@@ -90,8 +96,6 @@ The Teensy is socketed. It should snap into place.
 ![](../pictures/ips_with_parts_and_Teensy.jpg)
 
 ## Connect IPS and SCA
-
-After boards arrive from assembly.
 
 Connect the SCA board to the IPS board. It should snap into place.
 

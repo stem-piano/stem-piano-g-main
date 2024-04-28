@@ -50,15 +50,20 @@ If no LED are not blinking or no voltage is measured, disconnect USB cable from 
 
 ## Test it works?
 
-Open a serial monitor in Arduino. A set of startup messages should display from the firmware running on the Teensy. If not, the problem could be with the Arduino serial connection. Or, the problem could be with the board.
+Open a serial monitor in Arduino. A set of startup messages should display from the firmware running on the Teensy.
 
 Example startup message:
 
 ![](../pictures/startup_example.jpg)
 
-Use a rectangle of white cardboard and try to "play a note" by quickly moving the cardboard toward the CNY-70 sensor. See *stem piano* video https://youtu.be/NmziaIYKS1g?t=115.
+Use a rectangle of white cardboard and try to "play a note" by quickly moving the cardboard toward the CNY-70 sensor. See *stem piano* video https://youtu.be/NmziaIYKS1g?t=115. A message should appear in the Arduino serial monitor that a note was sent to MIDI.
 
-A message should appear in the Arduino serial monitor that a note was sent to MIDI.
+If the serial monitor is not displaying anything, the problem could be with any of:
+* a PCB board
+* the Arduino serial connection
+* bad cable or connection
+* serial monitor window was opened after the message displayed
+* the *debug_level* in settings file is not set to display information
 
 ## Test with a MIDI cable
 

@@ -18,13 +18,13 @@ On the right is a digital multimeter. To the left is an HPS sensor board. In the
 
 ### Test Setup Components
 
-HPS sensor (shown at left)
+* HPS sensor.
 
-+3.3 volt power supply. The current required is very low. Therefore, an inexpensive USB breadboard power supply will work.
+* +3.3 volt power supply. The current required is very low. Therefore, an inexpensive USB breadboard power supply will work.
 
-Multimeter. The multimeter is set to measure DC voltage.
+* Multimeter. The multimeter is set to measure DC voltage.
 
-White paper. It is important to use the same kind of material on the hammer shanks as use for this test. This is because the HPS sensor output voltage depends on the reflective surface. If use a different surface in the piano, then the test results will not match the results when in the piano.
+* White paper. It is important to use the same kind of material on the hammer shanks as use for this test. This is because the HPS sensor output voltage depends on the reflective surface. If use a different surface in the piano, then the test results will not match the results when in the piano.
 
 ### Connections
 
@@ -38,7 +38,7 @@ The multimeter ground connects to the power supply ground.
 
 ## Picture of Setup
 
-In this figure the output voltage reads 1.371 volts. The voltage is not 2.5 volts because notice in the figure that the HPS sensor is partially distant from the white paper.
+In this picture the output voltage reads 1.371 volts. The voltage is not 2.5 volts because notice in the picture that the HPS sensor is partially distant from the white paper.
 
 ![](./pictures/testing_hps.jpg)
 

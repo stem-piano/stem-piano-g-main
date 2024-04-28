@@ -27,13 +27,13 @@ See the following *stem piano* videos for examples:
 * https://www.youtube.com/watch?v=NmziaIYKS1g
 * https://www.youtube.com/watch?v=5U7LvOMth28 (audio accidentally recorded single-channel).
 
-## Install a heavy bar for the hammer stop
+## Install a heavy bar for the hammer shank stop
 
 Use a strip of firm material to absorb the force of shank against the bar. For example, weatherstripping works ok.
 
-Position the hammer stop bar horizontally as close to each hammer as possible.
+Position the hammer shank stop bar horizontally as close to each hammer as possible.
 
-Adjust the hammer stop bar vertically until it is approximately 1/8" above the shank drop point. So, when pressing a piano key, move the key down slowly and adjust the bar so the hammer shank does not quite hit the stop bar. Try to get an even distance for all 88 hammer shanks.
+Adjust the hammer shank stop bar vertically until it is approximately 1/8" above the shank drop point. So, when pressing a piano key, move the key down slowly and adjust the bar so the hammer shank does not quite hit the stop bar. Try to get an even distance for all 88 hammer shanks.
 
 See *stem piano* videos
 * https://youtu.be/ANJI4KAolEw?t=86
@@ -51,7 +51,9 @@ Horizontally, the hole is such that the CNY-70 on the HPS is close to the place 
 
 Install all 88 HPS sensors. The nut is on top. If put nut on bottom, it could hit the piano hammer shank.
 
-Adjust the sensor rail up and down until the hammer shank is between 0.5 millimeters 1.5 millimeter from the CNY-70 sensor when hammer hits the stop bar. If the distance is smaller than 0.5 millimeters, the CNY-70 response loses sensitivity. If the distance is larger than 1.5 millimeters, the output voltage can be too low. Better for the distance to be too large then too small.
+Another option is aluminum extrusion. See https://github.com/stem-piano/stem-piano-g-main/issues/1
+
+Adjust the sensor rail up and down until the hammer shank is between 0.5 millimeters 1.5 millimeter from the CNY-70 sensor when hammer hits the stop bar. If the distance is smaller than 0.5 millimeters, the CNY-70 response loses sensitivity. If the distance is larger than 1.5 millimeters, the output voltage can be too low. Better for the distance to be too large than too small.
 
 The following picture shows the measurement location. In this picture there are no white stickers. For best results, use a white sticker or white paint on the hammer shank underneath the CNY-70 sensor.
 

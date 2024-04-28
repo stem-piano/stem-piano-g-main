@@ -35,11 +35,11 @@ For simplest initial board bring up, it is easiest to skip the TFT display. Can 
 
 ## Getting Source Files from GitHub
 
-Since these instructions are for a single board that includes both damper and hammer functionality, it is not necessary to place common code in a separate Arduino library.
-
-Get the code from the following locations and save into the Arduino project folder on computer:
 * Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/StemPianoIPS2
 * Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/ips2_hammer
+* Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/ips2_damper
+
+Damper is optional.
 
 For the copy of code on computer, rename *src_hammer.cpp* to *src_hammer.ino*.
 

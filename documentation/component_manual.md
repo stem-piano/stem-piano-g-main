@@ -17,23 +17,27 @@ Name is the IPS for Integrated Processing System. *Stem Piano* uses version 2.0 
 
 ### 1 - Data acquisition board
 
-Name is the SCA for Six Channel Analog. The data acquisition board removably attaches to the mainboard. *Stem Piano* uses version 0.0 of the SCA data acquisition board.
+Name is the SCA for Six Channel Analog. The data acquisition board removably attaches in the center of the mainboard. *Stem Piano* uses version 0.0 of the SCA data acquisition board.
+
+Actual SCA size compared to IPS is smaller than shown in figure.
 
 ![](diagrams/sca00.png)
 
-### 88 - Hammer sensor PCB (named HPS for Hammer Position Sensor).
+### 88 - Hammer sensor PCB
 
-Each HPS sensor mounts above a piano shank, close to where the hammer shank connects to the hammer flange. Actual PCB size compared to IPS PCB is smaller than shown in figure.
+Named HPS for Hammer Position Sensor.
+
+Each HPS sensor mounts above a piano shank, close to where the hammer shank connects to the hammer flange. Actual HPS size compared to IPS is smaller than shown in figure.
 
 ![](diagrams/hps08.png)
 
-### 88 - Optional damper sensors PCB (named HPS).
+### 88 - Optional damper sensors PCB
 
 Identical to HPS hammer sensor boards.
 
-### 1 - Pedal Level Shift PCB
+### 1 - Pedal Level Shift (PLS) PCB
 
-*FUTURE* - Small circuit board to adjust the pedal voltage. See details section below. Actual PCB size compared to IPS PCB is smaller than shown in figure.
+*FUTURE* - Small circuit board to adjust the pedal voltage. See details section below. Actual PLS size compared to IPS is smaller than shown in figure.
 
 ![pls00](./diagrams/pls00.png)
 
@@ -77,7 +81,7 @@ Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/rel
 
 In this directory are the files needed for PCB fabrication and a list of all components for the board.
 
-The Teensy 4.1 development board removably connects to the IPS PCB.
+The Teensy 4.1 processor removably connects to the IPS PCB.
 
 ### Six Channel Analog (SCA) PCB
 
@@ -219,11 +223,19 @@ L-shaped aluminum solid angle. 1 inch each for the two sides and 1/8 inch thick.
 
 The aluminum rail should be as straight as possible.
 
-### Hammer Stop Bar
+![](./pictures/sensor_rail.jpg)
+
+Another option is aluminum extrusion. See https://github.com/stem-piano/stem-piano-g-main/issues/1
+
+### Hammer Shank Stop Bar
 
 Steel square tube. 3/4 inch sides and 1/16 inch thick. Length is at least piano action width.
 
-The square steel hammer stop bar should be as straight as possible.
+The square steel hammer shank stop bar should be as straight as possible.
+
+### Hammer Padding
+
+Attach padding to the hammer shank stop bar. This is a firm rubber or foam strip that the hammer shank hits. Weatherstripping with self-adhesive tape can work.
 
 ### Piano Action Frame
 

@@ -4,7 +4,9 @@ Some released circuit boards also include KiCad project files. Links below are t
 
 ## Review boards
 
-Before sending to fabrication, make sure each board does not require changes. Changes could be for a component issue or a design improvement. Make sure the boards comply with your requirements for the piano and environment. Take a look at the *Issues* in this repository in case pending board changes are needed.
+Before sending to fabrication, make sure each board does not require changes. Changes could be for a component issue, a design issue, or an improvement. Take a look at the *Issues* list - https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues
+
+Make sure the boards comply with your requirements for the piano and environment.
 
 If changes are required, make the changes to the schematic and layout, then purchase boards.
 
