@@ -45,7 +45,7 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 ![](./diagrams/switches.png)
 
 ### ips_sw1_position2
-* Upper left switch next to Ethernet connector on the IPS circuit board.
+* Upper left switch next to MIDI connector on the IPS circuit board.
 * OFF = Normal damper threshold.
 * ON = High damper threshold.
 * Normally in the OFF position
@@ -110,19 +110,19 @@ Without calibration, the piano will likely sound uneven when playing. This is si
 
 ### Use
 
-When sca_sw2_position2 and sca_sw2_position1 switches are both off, the *stem piano* firmware continuously measures the CNY-70 values, updates the minimum and maximum values, and applies calibration values to the CNY-70 measurements before using the values.
+When sca_sw1_position2 and sca_sw1_position1 switches are both off, the *stem piano* firmware continuously measures the CNY-70 values, updates the minimum and maximum values, and applies calibration values to the CNY-70 measurements before using the values.
 
 (*FUTURE*) - The calibration values are stored in nonvolatile memory and re-applied when power is cycled.
 
-* When all calibration values stored in nonvolatile memory are at default (for example, when sca_sw2_position1 is ON), the LED under the TFT flashes quickly.
+* When all calibration values stored in nonvolatile memory are at default (for example, when sca_sw1_position1 is ON), the LED under the TFT flashes quickly.
 
 * When the nonvolatile memory holds a calibration value for all 88 keys, the LED under the TFT flashes slowly.
 
-When sca_sw2_position1 switch is ON, calibration is disabled. This also deletes the values stored in nonvolatile memory. If the sensor placement is changed, delete the old calibration values using this switch.
+When sca_sw1_position1 switch is ON, calibration is disabled. This also deletes the values stored in nonvolatile memory. If the sensor placement is changed, delete the old calibration values using this switch.
 
-When sca_sw2_position2 switch is ON, the calibration values are frozen and do not update. However, the frozen values continue to be applied to the signal.
+When sca_sw1_position2 switch is ON, the calibration values are frozen and do not update. However, the frozen values continue to be applied to the signal.
 
-The best approach for calibration is to power up the piano, turn ON sca_sw2_position1 then turn OFF sca_sw2_position1. This ensures old values are deleted. Then firmly play each piano note once. Then, turn ON sca_sw2_position2 to freeze those values.
+The best approach for calibration is to power up the piano, turn ON sca_sw1_position1 then turn OFF sca_sw1_position1. This ensures old values are deleted. Then firmly play each piano note once. Then, turn ON sca_sw1_position2 to freeze those values.
 
 ## Front LEDs / Test Points
 
@@ -179,11 +179,15 @@ The configuration switches, LEDs, and test points are different on the damper IP
 
 ## Caring for Stem Piano
 
-The CNY-70 have a long, but finite lifetime. Recommend not keeping piano powered-up when not in use.
+The CNY-70 have a long, but finite lifetime.
+
+Turn off piano when not in use.
+
+Turn off piano when changing any connections.
 
 Protect the circuit boards from electrostatic discharge (ESD) and anything touching them. Build a case or enclose the piano. The circuit boards generate some heat and should be vented.
 
-If the frame is bumped, it could change the sensor alignment. In this case, clear the calibration values and restart the calibration process.
+If the frame is moved it could change the sensor alignment. In this case, clear the calibration values and restart the calibration process.
 
 Enjoy!
 

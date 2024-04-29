@@ -45,11 +45,11 @@ Connect each HPS sensor to the correct IPS location using the ribbon cable.
 
 Hammers are numbered starting at piano note A0 (key number 0), through piano note C8 (key number 87) in the first figure. Connect each set of three pins (power, ground, and signal) to the same three pins on each of the 88 sensors boards.
 
-Each HPS board is marked with a plus (+) symbol, a minus (-) symbol, and an exclamation point (!) symbol.
+* Each HPS board is marked with a plus (+) symbol, a minus (-) symbol, and an exclamation point (!) symbol.
 
-The pins on the IPS board are market with a "3.3V" symbol, a "gnd" symbol, and an "in" symbol.
+* The pins on the IPS board are market with a "3.3v" symbol, a "gnd" symbol, and an "in" symbol.
 
-Select the triplet of pins on the IPS board that are closest to the +5V power input and connect (+) to "3.3V", connect (-) to "gnd", and connect (!) to "in". The connection in this initial test is for the lowest note on a piano, A0. It is data index 0 in the firmware.
+* Connect (+) to "3.3V", connect (-) to "gnd", and connect (!) to "in".
 
 Connecting all the sensors is very time consuming. A total of 3*88 = 264 wires are required. Gluing into sets makes the connection process much easier. See *stem piano* video https://youtu.be/gNeLMGaxmG0?t=103.
 
@@ -77,6 +77,8 @@ Connect jumper wires (short ribbon cable will work) as shown in figure for the I
 Three of the connection wires are optional (sustain connected, sostenuto connected, and una corda connected). Also, in many cases a sostenuto and una corda pedal are not used. Therefore, up to seven keys beyond the traditional 88 keys can be connected (total of 95 keys if using only a single pedal).
 
 Pedal signals are not hardwired on the PCB. Therefore, these jumpers enable connecting pedals in many different configurations.
+
+If noisy pedals or notes, connect unused pins to ground using a short segment of ribbon cable. For example, in this figure pins labeled 88 and 89 in the figure, on J45 (the 'in' row) connect to the adjacent ground pins on J41 (the 'gnd' row).
 
 # PREVIOUS STEP
 [./hps_testing.md](./hps_testing.md)

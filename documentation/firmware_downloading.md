@@ -7,6 +7,7 @@ A USB cable connects from an external computer to the Teensy 4.1 processing syst
 The USB cable has two purposes:
 - Send firmware from computer to the Teensy 4.1
 - Provide +5 volt power from a computer to the Teensy and from there to all *stem piano* circuit boards.
+- Serial monitor connection.
 
 When 8 or less HPS are connected to the IPS mainboard, the computer can probably deliver enough current for all *stem piano* circuits through the USB cable.
 

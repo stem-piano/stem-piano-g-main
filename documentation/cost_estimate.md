@@ -8,7 +8,7 @@ Here is a summation of all the parts costs in the bill of materials files:
 
 ## Component costs
 
-* IPS mainboard - minimal options (no TFT display, no LED, no test points, no Can bus, no Ethernet, no config switches) - $120.
+* IPS mainboard - minimal options (no TFT display, no LED, no test points, no Can bus, no Ethernet, does include config switches) - $123.
 * IPS mainboard fully populated - $175.
 * SCA data acquisition card - minimal options - $45.
 * SCA data acquisition card fully populated - $50.
@@ -16,11 +16,12 @@ Here is a summation of all the parts costs in the bill of materials files:
 * HPS 0.8 or HPS 0.4 (without trimmer resistor) - $2.15.
 
 ## Total cost for the least expensive system
-* No display, LEDs, test points, Ethernet, or configuration switches.
+* No display, LEDs, test points, Ethernet.
+* Includes configuration switches.
 * No separate IPS and SCA for damper processing.
 * No damper sensors. Damper position is estimated in firmware from hammer position.
 * No trimmer resistors on HPS hammer sensors.
-* Total = $120 + $45 + 88 * $2.15 = $354.20.
+* Total = $123 + $45 + 88 * $2.15 = $357.20.
 
 ## Total cost for the most expensive system
 * All features - boards are fully populated.

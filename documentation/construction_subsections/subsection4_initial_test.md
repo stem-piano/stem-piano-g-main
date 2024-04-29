@@ -4,13 +4,13 @@ Video links in documentation below are to the *stem piano* historical progress v
 
 ## Setup
 
+The piano action and frame are not required for this step.
+
 Do not connect the +5V external power supply for this step. The board is powered through the Teensy 4.1 USB cable.
 
 Do not install jumper J12 on IPS2 printed circuit board.
 
 Make sure all DIP switches on IPS2 are in their off position. If switches were not installed, this step is not necessary.
-
-There is no need to connect a MIDI or Ethernet cable for this step.
 
 ## Connect a single HPS board
 
@@ -81,9 +81,9 @@ Power up.
 
 ## Celebrate, just a little
 
-If at this step, congratulations, most of the project risk is eliminated. See *stem piano* video https://youtu.be/M1_228-ClXM?t=321.
+If at this step, congratulations. See *stem piano* video https://youtu.be/M1_228-ClXM?t=321.
 
-To eliminate even more risk, test other HPS boards and other IPS input pins. Test several simultaneously.
+Test other HPS boards and other IPS input pins. Test several simultaneously.
 
 As more HPS sensor boards are connected to the IPS board, the total current draw of the system increases. Do not connect more than eight HPS while powering the system with the USB cable to Teensy processor.
 
