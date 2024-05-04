@@ -76,9 +76,3 @@ Options:
 ## Details
 
 For a detailed analysis of the HPS design and voltages, including how resistor values were selected, see https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/design/hps_cny70/hps_cny70.md.
-
-# PREVIOUS STEP
-[./construction_manual.md](./construction_manual.md)
-
-# NEXT STEP
-[./assembly_manual.md](./assembly_manual.md)

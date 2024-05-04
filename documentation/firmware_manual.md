@@ -66,9 +66,3 @@ Everything within this if() statement runs at the ADC sample rate.
 ## Software
 
 *documentation will be added in the future*
-
-# PREVIOUS STEP
-[./firmware_downloading.md](./firmware_downloading.md)
-
-# NEXT STEP
-[./users_manual.md](./users_manual.md)

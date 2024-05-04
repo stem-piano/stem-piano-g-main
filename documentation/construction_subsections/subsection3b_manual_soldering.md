@@ -1,6 +1,6 @@
 # Stem Piano G - Manual Soldering
 
-These instructions will be added in the future.
+These instructions may be added in the future.
 
 General comments:
 

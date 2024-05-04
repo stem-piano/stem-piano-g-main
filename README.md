@@ -6,13 +6,15 @@ The Model G version is the first completed piano.
 
 If you build a piano, please share about it in the *Show & Tell* Discussions.
 
-## How to Build A Hybrid MIDI Piano
+## Piano Documentation
 
 Start here: [documentation/README.md](documentation/README.md)
 
 ## Stem Piano Overview
 
 The following is from the *README.md* file in the *DIY-Grand-Digital-Piano* repository:
+
+"
 
 *A hybrid piano combines the physical action of an acoustic piano with MIDI, sound generation, and other features of a digital keyboard. Some piano manufacturers sell hybrid pianos.*
 
@@ -26,12 +28,15 @@ The following is from the *README.md* file in the *DIY-Grand-Digital-Piano* repo
 
 *The platform and code could also adapt to building a range of other unique and innovative musical instruments.*
 
-## Features
+"
 
-* Works on grand and upright pianos.
-* Works with the action separate from the piano or as a silent system in a full piano.
-* Works with a digital keyboard (sensors may need modification).
-* Can use as part of creating innovative new musical instruments.
+## Major Features
+
+* Piano Actions:
+    * Grand or upright pianos.
+    * Action separate from the piano or as a silent system in a full piano.
+    * Digital keyboard (sensors may need modification).
+    * Or, can use as part of creating innovative new musical instruments.
 * Sends data via a single 5-pin serial MIDI.
 * Measures and sends hammer velocity and, optionally, damper velocity over MIDI.
 * Includes three jacks, quarter-inch, for pedals.

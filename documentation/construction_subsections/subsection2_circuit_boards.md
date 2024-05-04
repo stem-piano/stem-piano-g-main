@@ -4,7 +4,9 @@ Some released circuit boards also include KiCad project files. Links below are t
 
 ## Review boards
 
-Before sending to fabrication, make sure each board does not require changes. Changes could be for a component issue, a design issue, or an improvement. Take a look at the *Issues* list - https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues
+Before sending to fabrication, make sure each board does not require changes. Changes could be for a component issue, a design issue, or an improvement. Take a look at the *Issues* list
+* https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues
+* https://github.com/stem-piano/stem-piano-g-main/issues
 
 Make sure the boards comply with your requirements for the piano and environment.
 
@@ -36,11 +38,11 @@ Four board options:
 
 * Option #0 (recommended) - The surface mount board without trimming resistor. Location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps08
 
-* Option #1 - The board with a trimming resistor. This board is more expensive but gives greater control over note accuracy. Before installing HPS in a piano, adjust each trimming resistor so the output voltage matches the ADC reference voltage when at maximum value. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07/hps07_gerber
+* Option #1 - The board with a trimming resistor. This board is more expensive but gives greater control over note accuracy. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07/hps07_gerber
 
 * Option #2 - The board without a trimming resistor. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps04/hps04_gerber
 
-* Option #3 - Any sensor board that meets the interface specification will work. However, the instructions in this file are for an HPS board.
+* Option #3 - Any sensor board that meets the interface specification will work.
 
 ## Send the pedal level shift (PLS) Gerber files to the PCB manufacturer and order one board
 

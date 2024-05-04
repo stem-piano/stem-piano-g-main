@@ -17,7 +17,7 @@ When the computer cannot deliver enough current, the IPS board has a +5 volt pow
 
 However, using an external +5 volt power at J1 presents a problem because the USB cable is also sending +5 volts power. Connecting both power inputs at the same time is not good.
 
-See the warnings document in the *DIY-Grand-Digital-Piano* repository for details: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
+See the warnings document in the *DIY-Grand-Digital-Piano* repository for additional details: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
 
 ## USB Cable And +5 Volt Power - Solutions
 
@@ -42,9 +42,3 @@ When initially downloading firmware to the Teensy, may need to push the download
 ## Strategy When Using Hammer and Damper Boards
 
 If running Arduino software for both hammer and damper Teensy simultaneously, use the serial monitor to keep track of which USB is connected to each Teensy. The serial monitor can display the Teensy connection.
-
-# PREVIOUS_STEP
-[.firmware_setup.md](./firmware_setup.md)
-
-# NEXT STEP
-[.firmware_manual.md](./firmware_manual.md)

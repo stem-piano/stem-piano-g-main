@@ -3,7 +3,7 @@
 ## Recommended
 
 ### Configuration Switch Tool
-Thin wood or plastic utensil for moving the configuration switches.
+Thin wood or plastic utensil for moving the configuration switches. Use something nonconducting.
 
 ### Digital Multimeter
 Useful for checking power supply voltages, sensor (HPS) output voltage, pullup resistor voltage values, and other signals.
@@ -22,7 +22,7 @@ For building the frame, drilling sensor holes, mounting sensors, installing the 
 
 ## Optional
 
-### 1.0mm Flat Head Screwdriver
+### 1.0 millimeter Flat Head Screwdriver
 Need if using a version of Hammer Position Sensor (HPS) with a trimming resistor. Use screwdriver to adjust the resistor.
 
 ### Soldering
@@ -32,6 +32,3 @@ If hand soldering any components, a complete soldering setup is needed.
 ### Oscilloscope
 
 Use an oscilloscope to check time-varying signals. For example, the sampling rate and processor burden. For selecting oscilloscope bandwidth, the fastest circuit board signal is the SPI clock which can be up to 70MHz.
-
-# NEXT STEP
-[./components_manual.md](./component_manual.md)

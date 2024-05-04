@@ -35,9 +35,9 @@ For simplest initial board bring up, it is easiest to skip the TFT display. Can 
 
 ## Getting Source Files from GitHub
 
-* Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/StemPianoIPS2
-* Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/ips2_hammer
-* Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/ips2_damper
+* https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/StemPianoIPS2
+* https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/ips2_hammer
+* https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/ips2_damper
 
 Damper is optional.
 
@@ -74,11 +74,3 @@ If it does not compile, see the https://github.com/gzweigle/DIY-Grand-Digital-Pi
 Another source of help is the https://www.pjrc.com/ website.
 
 If it does compile, the boards are now ready to install firmware.
-
-# PREVIOUS STEP
-If reading as part of *Construction Manual*, return there. Else:
-[./assembly_manual.md](./assembly_manual.md)
-
-# NEXT STEP
-If reading as part of *Construction Manual*, return there. Else:
-[./firmware_downloading.md](./firmware_downloading.md)

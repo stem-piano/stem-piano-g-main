@@ -2,7 +2,7 @@
 
 List of piano components and accessories.
 
-Video links in documentation below are to the *stem piano* historical progress videos on YouTube: https://www.youtube.com/@gzpiano88.
+Video links in documentation below are to the *stem piano* historical progress videos on YouTube: https://www.youtube.com/@gzpiano88. Useful for general ideas, not specific instructions.
 
 Component links in documentation below are to the original project repository: https://github.com/gzweigle/DIY-Grand-Digital-Piano.
 
@@ -260,8 +260,7 @@ Each connection needs 3 wires. Hammer sensors require 3 wires * 88 keys = 264 wi
 
 * Keep the cables away from electrical noise sources such as the +5 volt power supply.
 
-*Stem Piano* video of connection approach:
-* https://youtu.be/gNeLMGaxmG0?t=103
+*Stem Piano* connection example video: https://youtu.be/gNeLMGaxmG0?t=103
 
 ### Hammer and Damper Board Connection
 
@@ -290,9 +289,3 @@ Optionally connect to hammer IPS board. If using a separate damper system, a sep
 * 88 of the 6-32 x 3/8 inch machine screws if use a single washer. If use a washer on top and bottom of HPS then 6-32 x 1/2 inch machine screws.
 * 88 of the No. 6 flat washers. If use a washer on top and bottom then double this number.
 * 88 of the 6-32 hex nuts.
-
-# PREVIOUS STEP
-[./tools.md](./tools.md)
-
-# NEXT STEP
-[./construction_manual.md](./construction_manual.md)

@@ -68,11 +68,12 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 
 ### sca_sw2_position2
 * Upper switch on SCA card.
-* Velocity scaling [1]. See below.
+* Not used.
 
 ### sca_sw2_position1
 * Below sca_sw1_position2.
-* Velocity scaling [0]. See below.
+* OFF = Normal piano playing.
+* ON = Velocity dynamic range setup.
 
 ### sca_sw1_position2
 * Below sca_sw1_position1.
@@ -84,19 +85,24 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * OFF = Calibration values are applied to signals normally.
 * ON = Disable calibration. No calibration values are applied to signals. Most likely the volume will be uneven. See below.
 
-## Velocity
+## Velocity Dynamic Range Setup
 
-Each piano action is unique and will have slightly different minimum and maximum velocities. Use the switches to scale velocity to get the best touch. Because of variable piano actions, it may also be necessary to adjust the MIDI velocity curves with the sound generation software running on an external computer.
+Each piano action is unique and will have slightly different minimum and maximum velocities.
 
-| Velocity scaling [1] | Velocity scaling [0] | Scaling       |
-|----------------------|----------------------|---------------|
-|          0           |          0           | 1.0 (default) |
-|          0           |          1           | 0.75          |
-|          1           |          0           | 1.5           |
-|          1           |          1           | 2.0           |
+If hammers swing approximately 1.75 inches, the default velocity range may work ok. If not, follow these steps below.
+
+(Turn down speaker volume during these steps. Do this because if the velocity dynamic range is accidentially recorded incorrectly, MIDI output could be maximum volume. If a problem occurs, repeat the following steps until good results are obtained.)
+
+* Make sure calibration is complete (see instructions below).
+* Turn the velocity dynamic range switch (sca_sw2_position1) to ON.
+* Strike several notes with maximum velocity. Select multiple keys from bass to treble.
+* Turn the velocity dynamic range switch (sca_sw2_position1) to OFF.
+
+While the switch is ON, previous dynamic range values are used. When the switch is moved back to OFF, new values are applied.
+
+(*FUTURE*) - Velocity dynamic range values are stored in nonvolatile memory and reapplied after a power cycle. To avoid loud notes after changing the frame or sensor positions, turn on power with sca_sw1_position1 in the ON position.
 
 Other scaling values are possible by editing the settings file. See [Firmware Manual](./firmware_manual.md).
-
 
 ## Calibration
 
@@ -106,7 +112,7 @@ Each of the 88 CNY-70 sensors on the HPS circuit boards exhibits a slightly diff
 
 During calibration the *stem piano* firmware measures the maximum and minimum sensor output values and uses those values to calibrate the CNY-70 sensor response in firmware.
 
-Without calibration, the piano will likely sound uneven when playing. This is similar to the situation of a poorly voiced piano.
+Without calibration, the piano will likely sound uneven when playing. This is similar to the situation of a poorly voiced piano. Additionally, some notes may not make any sound.
 
 ### Use
 
@@ -118,7 +124,7 @@ When sca_sw1_position2 and sca_sw1_position1 switches are both off, the *stem pi
 
 * When the nonvolatile memory holds a calibration value for all 88 keys, the LED under the TFT flashes slowly.
 
-When sca_sw1_position1 switch is ON, calibration is disabled. This also deletes the values stored in nonvolatile memory. If the sensor placement is changed, delete the old calibration values using this switch.
+When sca_sw1_position1 switch is ON, calibration is disabled. This also deletes the values stored in nonvolatile memory and deletes the velocity dynamic range stored values. If the sensor placement is changed, delete all old values using this switch.
 
 When sca_sw1_position2 switch is ON, the calibration values are frozen and do not update. However, the frozen values continue to be applied to the signal.
 
@@ -137,15 +143,20 @@ This test point is high during Teensy main loop processing. The rate is very hig
 This LED is ON when any damper is raised by pressing and holding a piano key.
 
 Normally this LED is OFF when no piano keys are pressed. If LED is ON when no piano keys are pressed, this indicates:
-* the *damper_threshold_using_damper* or *damper_threshold_using_hammer* setting is incorrect or
-* there is a sensor problem or
-* not all notes have calibration values (in this case the calibration LED is flashing quickly).
+* the *damper_threshold_low* or *damper_threshold_high* setting is incorrect or
+* a sensor problem or
+* not all notes have calibration values (in this case the calibration LED is flashing quickly) or
+* distances from sensors to hammer shanks are not uniform between keys.
 
 ### strike
 
-This LED is ON when any one of the hammers is close to the string. When a single piano key is pressed quickly, this LED should be briefly ON.
+This LED is ON when any hammer is close to the string. When a single piano key is pressed quickly, this LED should briefly turn ON then OFF.
 
-Normally this LED is OFF when no piano keys are pressed. If LED is ON when no piano keys are pressed, this indicates a sensor problem or not all notes have calibration values.
+Normally this LED is OFF when no piano keys are pressed. If LED is ON when no piano keys are pressed, this indicates:
+* the *strike_threshold* setting is incorrect or
+* a sensor problem or
+* not all notes have calibration values (in this case the calibration LED is flashing quickly) or
+* distances from sensors to hammer shanks are not uniform between keys.
 
 ### sustain
 
@@ -187,7 +198,7 @@ Turn off piano when changing any connections.
 
 Protect the circuit boards from electrostatic discharge (ESD) and anything touching them. Build a case or enclose the piano. The circuit boards generate some heat and should be vented.
 
-If the frame is moved it could change the sensor alignment. In this case, clear the calibration values and restart the calibration process.
+If the frame is moved it could change the sensor alignment. In this case, clear the calibration values and restart the calibration and velocity processes.
 
 Enjoy!
 
@@ -201,8 +212,10 @@ See the firmware/software manual for details on firmware and firmware settings: 
 
 ## Important Resources
 
-* Important things to be aware of: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
+* Please read the warnings and limitations: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
 
-* Help if things don't work: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md
+* Help it doesn't work: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md
 
-* Active problems, bugs, and lists of future enhancements: https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues
+* Active problems, bugs, and lists of future enhancements:
+    * https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues 
+    * https://github.com/stem-piano/stem-piano-g-main/issues
