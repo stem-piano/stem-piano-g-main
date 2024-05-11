@@ -44,46 +44,50 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 
 ![](./diagrams/switches.png)
 
-### ips_sw1_position2
+### ips_sw1_position2 (DAMPER_THRESHOLD)
 * Upper left switch next to MIDI connector on the IPS circuit board.
 * OFF = Normal damper threshold.
 * ON = High damper threshold.
 * Normally in the OFF position
 * Can use to debug dampers not releasing.
 
-### ips_sw1_position1
+### ips_sw1_position1 (EXTERNAL_DAMPER_BOARD)
 * Below ips_sw1_position2
 * OFF = No damper board. Dampers are estimated from hammer position.
 * ON = The optional external damper board is connected. Damper position is measured by the damper board and then sent to the hammer board.
 
-### ips_sw2_position2
+### ips_sw2_position2 (ENABLE_ETHERNET)
 * Below ips_sw1_position1.
 * OFF = Ethernet is disabled. No Ethernet cable is needed.
 * ON = Ethernet is enabled. Piano will not function unless an Ethernet cable is connected.
 
-### ips_sw2_position1
+### ips_sw2_position1 (ENABLE_TFT)
 * Below ips_sw2_position2.
 * OFF = TFT displays default message. Normal piano operation.
 * ON = TFT displays maximum hammer position and other diagnostic information. MIDI is disabled. Piano does not play sound.
 
-### sca_sw2_position2
+### sca_sw2_position2 (UNUSED)
 * Upper switch on SCA card.
 * Not used.
 
-### sca_sw2_position1
-* Below sca_sw1_position2.
+### sca_sw2_position1 (DYNAMIC_RANGE_SETUP)
+* Below sca_sw2_position2.
 * OFF = Normal piano playing.
 * ON = Velocity dynamic range setup.
 
-### sca_sw1_position2
-* Below sca_sw1_position1.
-* OFF = Calibration values are frozen.
-* ON = Calibration values are updated while piano is being played. See below.
+### sca_sw1_position2 (FREEZE_CAL_VALUES)
+* Below sca_sw2_position1.
+* OFF = Calibration values are updated while piano is played. See below.
+* ON = Calibration values are frozen.
+* OFF->ON = When move switch from OFF to ON, the present calibration values are stored into nonvolatile memory.
+* ON->OFF = No effect on nonvolatile memory.
 
-### sca_sw1_position1
-* Below sca_sw2_position2.
+### sca_sw1_position1 (DELETE_CAL_VALUES)
+* Below sca_sw1_position2.
 * OFF = Calibration values are applied to signals normally.
 * ON = Disable calibration. No calibration values are applied to signals. Most likely the volume will be uneven. See below.
+* OFF->ON = When move switch from OFF to ON, the calibration values in nonvolatile memory are deleted.
+* ON->OFF = No effect on nonvolatile memory.
 
 ## Velocity Dynamic Range Setup
 
@@ -91,16 +95,16 @@ Each piano action is unique and will have slightly different minimum and maximum
 
 If hammers swing approximately 1.75 inches, the default velocity range may work ok. If not, follow these steps below.
 
-(Turn down speaker volume during these steps. Do this because if the velocity dynamic range is accidentially recorded incorrectly, MIDI output could be maximum volume. If a problem occurs, repeat the following steps until good results are obtained.)
+(Turn down speaker volume during these steps. Do this because if the velocity dynamic range is accidentally recorded incorrectly, MIDI output could be maximum volume. If a problem occurs, repeat the following steps until good results are obtained.)
 
 * Make sure calibration is complete (see instructions below).
 * Turn the velocity dynamic range switch (sca_sw2_position1) to ON.
 * Strike several notes with maximum velocity. Select multiple keys from bass to treble.
 * Turn the velocity dynamic range switch (sca_sw2_position1) to OFF.
 
-While the switch is ON, previous dynamic range values are used. When the switch is moved back to OFF, new values are applied.
+While the sca_sw2_position1 (DYNAMIC_RANGE_SETUP) switch is ON, previous dynamic range values are used. When the switch is moved back to OFF, new values are applied.
 
-(*FUTURE*) - Velocity dynamic range values are stored in nonvolatile memory and reapplied after a power cycle. To avoid loud notes after changing the frame or sensor positions, turn on power with sca_sw1_position1 in the ON position.
+(*FUTURE*) - Velocity dynamic range values are stored in nonvolatile memory and reapplied after a power cycle. To avoid loud notes after changing the frame or sensor positions, turn on power with sca_sw1_position1 (DELETE_CAL_VALUES) in the ON position.
 
 Other scaling values are possible by editing the settings file. See [Firmware Manual](./firmware_manual.md).
 
@@ -110,25 +114,35 @@ Other scaling values are possible by editing the settings file. See [Firmware Ma
 
 Each of the 88 CNY-70 sensors on the HPS circuit boards exhibits a slightly different response when measuring the hammer or damper position.
 
-During calibration the *stem piano* firmware measures the maximum and minimum sensor output values and uses those values to calibrate the CNY-70 sensor response in firmware.
+During calibration the *stem piano* firmware measures the maximum and minimum sensor output values and applies those values to calibrate the CNY-70 sensor response in real time.
 
-Without calibration, the piano will likely sound uneven when playing. This is similar to the situation of a poorly voiced piano. Additionally, some notes may not make any sound.
+Without calibration, the piano will likely sound uneven when playing. This is similar to the situation of a poorly voiced piano. Some notes may not make any sound.
 
-### Use
+### Calibration Control with Switches
 
-When sca_sw1_position2 and sca_sw1_position1 switches are both off, the *stem piano* firmware continuously measures the CNY-70 values, updates the minimum and maximum values, and applies calibration values to the CNY-70 measurements before using the values.
+When sca_sw1_position2 (FREEZE_CAL_VALUES) and sca_sw1_position1 (DELETE_CAL_VALUES) switches are both OFF, the *stem piano* firmware continuously measures the CNY-70 values, updates the calibration values, and applies calibration values to the CNY-70 measurements.
 
-(*FUTURE*) - The calibration values are stored in nonvolatile memory and re-applied when power is cycled.
+When sca_sw1_position1 (DELETE_CAL_VALUES) switch is ON:
+* Calibration is disabled.
+* Values stored in nonvolatile memory are deleted.
+* The velocity dynamic range stored values are deleted.
 
-* When all calibration values stored in nonvolatile memory are at default (for example, when sca_sw1_position1 is ON), the LED under the TFT flashes quickly.
+When sca_sw1_position2 (FREEZE_CAL_VALUES) switch is ON:
+ * The calibration values are frozen and do not update.
+ * The calibration values in nonvolatile memory are re-applied when power is cycled or when new firmware is downloaded.
 
-* When the nonvolatile memory holds a calibration value for all 88 keys, the LED under the TFT flashes slowly.
+LED under the TFT:
+* When all calibration values are at default the LED flashes quickly.
+* When sca_sw1_position1 (DELETE_CAL_VALUES) is ON, the LED flashes quickly.
+* When a calibration value is applied to all 88 keys, the LED flashes slowly.
 
-When sca_sw1_position1 switch is ON, calibration is disabled. This also deletes the values stored in nonvolatile memory and deletes the velocity dynamic range stored values. If the sensor placement is changed, delete all old values using this switch.
+### Calibration Best Results
+* Power up the piano.
+* Turn ON sca_sw1_position1 (DELETE_CAL_VALUES) then turn it OFF. This ensures old values are deleted from nonvolatile memory.
+* Firmly play each piano note once.
+* Turn ON sca_sw1_position2 (FREEZE_CAL_VALUES) to freeze calibration values and store them in nonvolatile memory.
 
-When sca_sw1_position2 switch is ON, the calibration values are frozen and do not update. However, the frozen values continue to be applied to the signal.
-
-The best approach for calibration is to power up the piano, turn ON sca_sw1_position1 then turn OFF sca_sw1_position1. This ensures old values are deleted. Then firmly play each piano note once. Then, turn ON sca_sw1_position2 to freeze those values.
+If the sensor placement is changed, repeat this process.
 
 ## Front LEDs / Test Points
 
@@ -192,9 +206,9 @@ The configuration switches, LEDs, and test points are different on the damper IP
 
 The CNY-70 have a long, but finite lifetime.
 
-Turn off piano when not in use.
-
-Turn off piano when changing any connections.
+Turn off piano when:
+* Not in use.
+* Changing any connections.
 
 Protect the circuit boards from electrostatic discharge (ESD) and anything touching them. Build a case or enclose the piano. The circuit boards generate some heat and should be vented.
 
@@ -219,3 +233,6 @@ See the firmware/software manual for details on firmware and firmware settings: 
 * Active problems, bugs, and lists of future enhancements:
     * https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues 
     * https://github.com/stem-piano/stem-piano-g-main/issues
+
+## Users Manual, Select Change History
+* Add storing calibration values.
