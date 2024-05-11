@@ -86,7 +86,7 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * Below sca_sw1_position2.
 * OFF = Calibration values are applied to signals normally.
 * ON = Disable calibration. No calibration values are applied to signals. Most likely the volume will be uneven. See below.
-* OFF->ON = When move switch from OFF to ON, the calibration values in nonvolatile memory are deleted.
+* OFF->ON = When move switch from OFF to ON, the calibration values in nonvolatile memory are deleted. Powering up with switch off may not delete.
 * ON->OFF = No effect on nonvolatile memory.
 
 ## Velocity Dynamic Range Setup
@@ -137,12 +137,19 @@ LED under the TFT:
 * When a calibration value is applied to all 88 keys, the LED flashes slowly.
 
 ### Calibration Best Results
+* Turn OFF sca_sw1_position1 (DELETE_CAL_VALUES).
 * Power up the piano.
 * Turn ON sca_sw1_position1 (DELETE_CAL_VALUES) then turn it OFF. This ensures old values are deleted from nonvolatile memory.
 * Firmly play each piano note once.
 * Turn ON sca_sw1_position2 (FREEZE_CAL_VALUES) to freeze calibration values and store them in nonvolatile memory.
 
-If the sensor placement is changed, repeat this process.
+### Calibration Debugging
+* Any excessively bad sensors might not calibrate correctly. An example is a sensor with a very low HPS output voltage when distance is small. See [./hps_testing.md](./hps_testing.md) for valid voltages.
+* Any sensors with excessively large voltages may calibrate correctly but then not restore calibration values after a power cycle correctly due to clipping. See [./hps_testing.md](./hps_testing.md) for valid voltages.
+* If the piano does not play evenly, try repeating the calibration process.
+* For best results, calibrate with minimal ambient light. See *stem piano* video https://youtu.be/TemXGmkoc-g?t=150 for a lighting issue example.
+
+If the sensor placement is changed, repeat the calibration process.
 
 ## Front LEDs / Test Points
 
