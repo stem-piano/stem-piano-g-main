@@ -108,6 +108,25 @@ While the sca_sw2_position1 (DYNAMIC_RANGE_SETUP) switch is ON, previous dynamic
 
 Other scaling values are possible by editing the settings file. See [Firmware Manual](./firmware_manual.md).
 
+## Velocity Curve
+
+The *stem piano* firmware computes velocity as the continuous derivative of hammer shank position. The firmware makes no curve adjustments. In the future velocity adjustability may be added (*FUTURE*). Until then, use external MIDI software to fine-tune the velocity curve. Here is an example:
+
+| input MIDI velocity | output MIDI velocity |
+|---------------------|----------------------|
+| 0                   | 0                    |
+| 16                  | 8                    |
+| 29                  | 18                   |
+| 41                  | 29                   |
+| 53                  | 43                   |
+| 70                  | 64                   |
+| 88                  | 88                   |
+| 105                 | 110                  |
+| 117                 | 121                  |
+| 127                 | 127                  |
+
+A velocity curve that sounds good has dependencies to the velocity dynamic range results.
+
 ## Calibration
 
 ### Overview
