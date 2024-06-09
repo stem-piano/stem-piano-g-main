@@ -110,13 +110,30 @@ Damper keys are numbered starting at piano note A0 (0), through piano note C8 (8
 
 *Stem Piano* video showing damper wiring https://youtu.be/NmziaIYKS1g?t=167
 
-## Connecting Pedal Header
+## Connecting Pedal Signals
 
-This figure does not show the small extra PLS 0.0 circuit board (*future*).
+### Without PLS (Pedal Level Shift)
+
+The first figure does not show the small extra PLS 0.0 circuit board.
 
 Connect jumper wires (short ribbon cable will work) as shown in figure for the IPS mainboard connected to hammer sensors. While it is possible to also use the damper IPS mainboard for pedal connections, the firmware is not presently setup to support this option. Note that with both hammer and damper pedal connections, a total of 6 pedals could be available.
 
 ![spg_pedal_connections](diagrams/pedal_connections.png)
+
+### With PLS (Pedal Level Shift)
+The next figure includes the PLS 0.0. circuit board. For illustration purposes the PLS circuit board is shown offset from J46.
+
+The purpose of PLS is level shifting the pedal signals so they stay within the analog-to-digital converter (ADC) maximum voltage. Without PLS the pedal signals may be clipped by the ADC.
+
+![spg_pedal_connections](diagrams/pedal_connections_with_pls.png)
+
+The Pedal Level Shift (PLS) headers:
+* J1 is a socket header on the bottom of board.
+* J2 is a pin header on the top of board.
+
+Connect the PLS J1 socket to the IPS J46 pin header. Then, connect wires as shown from the J2 pin header of PLS.
+
+### General
 
 Three of the connection wires are optional (sustain connected, sostenuto connected, and una corda connected). Also, in many cases a sostenuto and una corda pedal are not used. Therefore, up to seven keys beyond the traditional 88 keys can be connected (total of 95 keys if using only a single pedal).
 

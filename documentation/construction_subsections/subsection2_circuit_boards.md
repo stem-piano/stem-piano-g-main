@@ -46,4 +46,4 @@ Four board options:
 
 ## Send the pedal level shift (PLS) Gerber files to the PCB manufacturer and order one board
 
-Links *coming soon*.
+File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/pls00

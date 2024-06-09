@@ -37,7 +37,7 @@ Identical to HPS hammer sensor boards.
 
 ### 1 - Pedal Level Shift (PLS) PCB
 
-*FUTURE* - Small circuit board to adjust the pedal voltage. See details section below. Actual PLS size compared to IPS is smaller than shown in figure.
+Small circuit board to adjust the pedal voltage. See details section below. Actual PLS size compared to IPS is smaller than shown in figure.
 
 ![pls00](./diagrams/pls00.png)
 
@@ -55,7 +55,7 @@ Identical to HPS hammer sensor boards.
 Components when using one board to measure hammers and estimate dampers:
 * 1 IPS 2.0
 * 1 SCA 0.0
-* 1 PLS 0.0 (*FUTURE*)
+* 1 PLS 0.0
 * 88 HPS measuring the hammer positions
 * *StemPiano IPS2* firmware running on Teensy on IPS
 * *Hammer firmware* running on Teensy on IPS
@@ -64,7 +64,7 @@ Components when using one board to measure hammers and estimate dampers:
 If using an additional system to measure dampers, add the following. This is a duplicate of the boards to measure hammers. The only difference is the damper firmware.
 * 1 IPS 2.0
 * 1 SCA 0.0
-* 1 PLS 0.0 (*FUTURE*)
+* 1 PLS 0.0
 * 88 HPS measuring damper position
 * *StemPiano IPS2* firmware running on Teensy on second IPS (this is the same firmware as for hammers).
 * *Damper firmware* running on Teensy on second IPS (this is different than the hammer firmware).
@@ -131,7 +131,7 @@ Four options as listed below. It is ok to use multiple sensor versions in the sa
 
 ### Pedal Level Shift (PLS) Board
 
-Link: (*COMING SOON*)
+Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/00
 
 This small circuit board connects on top of pedal header J46. Adjusts the pedal voltage as explained in this logged issue - https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues/26.
 
