@@ -39,6 +39,10 @@ Identical to HPS hammer sensor boards.
 
 Small circuit board to adjust the pedal voltage. See details section below. Actual PLS size compared to IPS is smaller than shown in figure.
 
+* Solder a 7-connection pin header at J2 on the top side of the circuit board.
+* Solder a 7-connection socket header at J1 on the bottom side of the circuit board.
+* Solder 7500 ohm 0805 surface mount resistors for R1, R2, and R3.
+
 ![pls00](./diagrams/pls00.png)
 
 ### 3 - Sets of firmware.
