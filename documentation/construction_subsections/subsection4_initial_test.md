@@ -56,7 +56,7 @@ Example startup message:
 
 ![](../pictures/startup_example.jpg)
 
-Use a rectangle of white cardboard and try to "play a note" by quickly moving the cardboard toward the CNY-70 sensor. See *stem piano* video https://youtu.be/NmziaIYKS1g?t=115. A message should appear in the Arduino serial monitor that a note was sent to MIDI.
+Use a rectangle of white cardboard and try to "play a note" by quickly moving the cardboard toward the CNY70 sensor. See *stem piano* video https://youtu.be/NmziaIYKS1g?t=115. A message should appear in the Arduino serial monitor that a note was sent to MIDI.
 
 If the serial monitor is not displaying anything, the problem could be with any of:
 * a PCB board

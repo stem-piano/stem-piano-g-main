@@ -60,27 +60,21 @@ Drill 88 holes in the sensor rail. Each hole is located vertically above a hamme
 
 If holes are precise, they can match the machine screw diameter. Otherwise, make holes larger to give room for HPS horizontal adjustment.
 
-Horizontally, the hole is such that the CNY-70 on the HPS is close to the place where the shank rotates on the pin adjacent to the drop screw. The shank may get wider at this location.
+Horizontally, the hole is such that the CNY70 on the HPS is close to the place where the shank rotates on the pin adjacent to the drop screw. The shank may get wider at this location.
 
 Install all 88 HPS sensors. The nut is on top. If put nut on bottom, it could hit the piano hammer shank.
 
 Another option is aluminum extrusion. See https://github.com/stem-piano/stem-piano-g-main/issues/1
 
-Adjust the sensor rail up and down until the hammer shank is between 0.5 millimeters 1.5 millimeter from the CNY-70 sensor when hammer hits the stop bar. If the distance is smaller than 0.5 millimeters, the CNY-70 response loses sensitivity. If the distance is larger than 1.5 millimeters, the output voltage can be too low. Better for a distance too large than too small.
+Adjust the sensor rail up and down until the hammer shanks are approximately one millimeter from the CNY70 sensors when hammer hits the stop bar. If the distance is too much smaller than one millimeter, the CNY70 response loses sensitivity. If the distance is too much larger than one millimeter, the output voltage can be too low. Better for a distance too large than too small. See *Piano Regulation* subsection below in this file.
 
-The following picture shows the measurement location. In this picture there are no white stickers. For best results, use a white sticker or white paint on the hammer shank underneath the CNY-70 sensor.
+The following picture shows the measurement location. This picture shows no white stickers. For best results, use a white sticker or white paint on the hammer shank underneath each CNY70 sensor.
 
 ![](./pictures/hammer2sensor.jpg)
 
 Good note-to-note consistency depends on the consistency of shank-to-sensor distances for each sensor. It is a good idea to spend extra time making these distances as consistent as possible. One approach is using thin paper shims to adjust distances when connecting the sensors to the sensor rail.
 
-If the hammer shank wood is not strongly reflective, place white stickers on each shank under the CNY-70 location. Another option is white paint. Use the same kind of surface as use in the CNY-70 voltage level tests: [./hps_testing.md](./hps_testing.md).
-
-## Piano Action Regulation
-
-For best results, get the piano action adjusted while in the configuration described above
-
-Consistent shank height at sensor location.
+If the hammer shank wood is not strongly reflective, place white stickers on each shank under the CNY70 location. Another option is white paint. Use the same kind of surface as use in the CNY70 voltage level tests: [./hps_testing.md](./hps_testing.md).
 
 ## Connecting Hammer Sensors
 
@@ -140,3 +134,33 @@ Three of the connection wires are optional (sustain connected, sostenuto connect
 Pedal signals are not hardwired on the PCB. Therefore, these jumpers enable connecting pedals in many different configurations.
 
 If noisy pedals or notes, connect unused pins to ground using a short segment of ribbon cable. For example, in this figure pins labeled 88 and 89 in the figure, on J45 (the 'in' row) connect to the adjacent ground pins on J41 (the 'gnd' row).
+
+## Piano Regulation
+
+In addition to the piano action, the mechanical structure and electronics all contribute together to result in the most consistent, accurate, and precise piano possible.
+
+See this *Stem Piano* video for details on sources of note-to-note inconsistency and how to improve each: https://www.youtube.com/watch?v=yqkRKSGX6kw
+
+**Things to consider:**
+
+Each is rated low effect (L), medium effect (M), high effect (H).
+
+1. (H) Piano Action. Use the final mechanical setup during piano action regulation.
+
+2. (L) Sensor Rail Horizontal Position.
+
+3. (M) Sensor Rail Vertical Position. See instructions above.
+
+4. (H) Sensor Nonlinearity. The piano includes an automatic calibration feature. See the *Users Manual* in this repository.
+
+5. (H) Sensor Tolerance. Some CNY70 may result in an output voltage that is very low or very high. It is best to select a different CNY70 in these cases.
+
+6. (M) Crosstalk. The sensor spacing is large enough to keep crosstalk small.
+
+7. (L) Shank Angle.
+
+8. (L) Analog Front End. For the *Stem Piano G* design, the analog processing does not contribute significant note-to-note errors.
+
+9. (H) Reflective Material. The reflective surface under each CNY70 should be identical for all keys and dampers.
+
+10. (H) Ambient Light. If the sensors are exposed to ambient light it can cause uneven notes when the ambient light changes. One option to fix is rerun the automatic calibration when lighting conditions change. Avoid bright light as this could cause loud notes to sound.

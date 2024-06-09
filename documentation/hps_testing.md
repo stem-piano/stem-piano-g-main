@@ -44,17 +44,17 @@ In this picture the output voltage reads 1.371 volts. The voltage is not 2.5 vol
 
 ## The Test Instructions
 
-Move the CNY-70 on the HPS PCB close to a white sheet of paper and then move it away from the white sheet of paper.
+Move the CNY70 on the HPS PCB close to a white sheet of paper and then move it away from the white sheet of paper.
 
-When the CNY-70 on the HPS PCB is close to the paper, the multimeter DC voltage display should show a maximum value close to 2.5 volts. Move the PCB until a maximum value is shown on the display. The maximum value should not exceed 2.5 volts.
+When the CNY70 on the HPS PCB is close to the paper, the multimeter DC voltage display should show a maximum value close to 2.5 volts. Move the PCB until a maximum value is shown on the display. The maximum value should not exceed 2.5 volts.
 
-When the CNY-70 is a large distance from the paper, the multimeter DC voltage display should show a value close to 0 volts.
+When the CNY70 is a large distance from the paper, the multimeter DC voltage display should show a value close to 0 volts.
 
 Acceptable ranges:
 * For the larger voltage (small distance), anything between 1.5 volts and 2.5 volts is ok.
 * For the smaller voltage (large distance), anything between 0 volts and 0.3 volts is ok.
 
-Not all CNY-70 sensors are the same. Some will have larger voltages during the test and some will have smaller voltages during the test. This is expected and is ok.
+Not all CNY70 sensors are the same. Some will have larger voltages during the test and some will have smaller voltages during the test. This is expected and is ok.
 
 ## What if the smaller voltage (large distance) is above 0.3 volts?
 

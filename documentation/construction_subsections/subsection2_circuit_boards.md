@@ -36,11 +36,11 @@ Before building the boards, please read the HPS design document https://github.c
 
 Four board options:
 
-* Option #0 (recommended) - The surface mount board without trimming resistor. Location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps08
+* Option #0 (recommended for surface mount) - The surface mount board without trimming resistor. Location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps08
 
-* Option #1 - The board with a trimming resistor. This board is more expensive but gives greater control over note accuracy. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07/hps07_gerber
+* Option #1 - The board with a trimming resistor. This board is more expensive but may give better control over note accuracy. It is not recommended because it is expensive and because of potential to incorrectly adjust such that the current load exceeds the voltage regulator capability. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps07/hps07_gerber
 
-* Option #2 - The board without a trimming resistor. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps04/hps04_gerber
+* Option #2 (recommended if do not want surface mount components) - The board without a trimming resistor. File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/hps04/hps04_gerber
 
 * Option #3 - Any sensor board that meets the interface specification will work.
 

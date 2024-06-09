@@ -64,9 +64,9 @@ HPS 0.4 - Parts File without an adjustable resistor and using through-hole compo
 
 HPS 0.8 is recommended for normal use cases.
 
-Make sure the CNY-70 and pin headers are oriented properly with respect to top and bottom of the boards. See *stem piano* video https://youtu.be/C9174TC4kLs?t=162.
+Make sure the CNY70 and pin headers are oriented properly with respect to top and bottom of the boards. See *stem piano* video https://youtu.be/C9174TC4kLs?t=162.
 
-Here is an image of the CNY-70 and pin headers for the HPS 0.7 board and HPS 08 board. Resistors are not shown in images.
+Here is an image of the CNY70 and pin headers for the HPS 0.7 board and HPS 08 board. Resistors are not shown in images.
 
 ![hps07_3d](../pictures/hps07_3d.jpg)
 ![hps08_3d](../pictures/hps08_3d.jpg)
@@ -79,7 +79,7 @@ Bottom side of HPS 0.8 with components installed:
 
 ![](../pictures/hps08_bottom.jpg)
 
-Notice the orientation of the CNY-70. The "CNY-70" marking area on the CNY-70 is on the same side as the "cny-70" label on the HPS circuit board.
+Notice the orientation of the CNY70. The "CNY70" marking area on the CNY70 is on the same side as the "cny70" label on the HPS circuit board.
 
 The resistor values in the bill of materials are selected assuming a white reflective surface.
 
