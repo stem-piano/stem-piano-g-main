@@ -10,6 +10,8 @@ If you build a piano, please share about it in the *Show & Tell* Discussions.
 
 Start here: [documentation/README.md](documentation/README.md)
 
+Status: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/STATUS.md
+
 ## Stem Piano Overview
 
 The following is from the *README.md* file in the *DIY-Grand-Digital-Piano* repository:
