@@ -121,11 +121,27 @@ The purpose of PLS is level shifting the pedal signals so they stay within the a
 
 ![spg_pedal_connections](diagrams/pedal_connections_with_pls.png)
 
-The Pedal Level Shift (PLS) headers:
-* J1 is a socket header on the bottom of board.
-* J2 is a pin header on the top of board.
+The Pedal Level Shift (PLS) circuit board headers:
+* J1 is a socket header that is soldered onto the bottom of the PLS board.
+* J2 is a pin header that is soldered onto the top of the PLS board.
 
 Connect the PLS J1 socket to the IPS J46 pin header. Then, connect wires as shown from the J2 pin header of PLS.
+
+Following the previous diagram, below is a picture. For illustration in the picture the PLS socket header J1 is resting against the IPS pin header J46. Install with PLS fully seated. 
+
+In this picture the pedal quarter inch jacks are visible in the background (red and black).
+
+Note that the far right pin (for ground) on the PLS socket header does not have an associated pin on IPS J46. This is by design. Connections in picture:
+
+* blue wire connects to J45 for input 90 (una corda).
+* violet wire connects to J45 for input 91 (una corda connected).
+* grey wire connects to J45 for input 92 (sostenuto).
+* white wire connects to J45 for input 93 (sostenuto connected).
+* black wire connects to J45 for input 94 (sustain).
+* brown wire connects to J45 for input 95 (sustain connected).
+* red wire connects to any ground pin of J41.
+
+![pls_connection](pictures/pls00_connection.jpg)
 
 ### General
 
