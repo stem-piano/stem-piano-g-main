@@ -132,7 +132,7 @@ Four options as listed below. It is ok to use multiple sensor versions in the sa
 
 ### Pedal Level Shift (PLS) Board
 
-Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/00
+Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/pls00
 
 This small circuit board connects on top of pedal header J46. Adjusts the pedal voltage as explained in this logged issue - https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues/26.
 
