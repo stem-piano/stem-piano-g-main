@@ -154,6 +154,7 @@ LED under the TFT:
 * When all calibration values are at default the LED flashes quickly.
 * When sca_sw1_position1 (DELETE_CAL_VALUES) is ON, the LED flashes quickly.
 * When a calibration value is applied to all 88 keys, the LED flashes slowly.
+* When calibration values are written to EEPROM the LED temporarily stops flashing and is ON.
 
 ### Calibration Best Results
 * Turn OFF sca_sw1_position1 (DELETE_CAL_VALUES).
@@ -210,9 +211,28 @@ The SCA LEDs flash at a fixed rate. They are available for firmware customizatio
 
 One Ethernet LED flashes when data is transferred. The other flashes at a fixed rate and is available for firmware customization.
 
-## Serial Monitor
+## Communications
 
-Multiple categories of information is displayed through the Arduino serial monitor. See firmware code for details.
+### Serial Monitor
+
+Multiple categories of information are displayed through the Arduino serial monitor. See firmware code for details.
+
+### Ethernet
+
+Every instant that the analog-to-digital converter (ADC) samples the hammer shank positions, 12 hammer position values are sent over Ethernet.
+
+The values are after normalization and after calibration.
+
+The values are integers in range [-2^23, ..., 2^23].
+
+Select which 12 hammer shank positions are sent as follows:
+* Press and hold a single piano key.
+* Depress and release the sustain pedal.
+* Release the piano key.
+* The values for the held piano key along with the 11 subsequent key values are sent.
+
+Example software for receiving the 12 values over Ethernet:
+https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/software/releases/ips2_analytics
 
 ## If Add A Damper Board (optional)
 
