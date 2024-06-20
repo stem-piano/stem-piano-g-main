@@ -26,7 +26,7 @@ Some parts may need ordering separately such as the MIDI connector or pedal quar
 
 ## Solder parts on the IPS board
 
-Parts File: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/hardware/releases/ips20/ips20_bill_of_materials.txt
+Parts File: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/hardware/releases/ips20/ips20_bill_of_materials_0.txt
 
 ![](../pictures/ips_with_parts.jpg)
 

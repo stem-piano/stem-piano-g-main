@@ -45,6 +45,16 @@ Small circuit board to adjust the pedal voltage. See details section below. Actu
 
 ![pls00](./diagrams/pls00.png)
 
+### 6 - Optional Analog Condition Equalize "A" (ACE A) PCB
+
+Bank of load resistors for sensor output. Needed if sensors require an external load.
+
+Also useful to simplify sensor-to-mainboard wiring.
+
+See *Assembly Manual* for installation details.
+
+![aceA00](./diagrams/aceA00.png)
+
 ### 3 - Sets of firmware.
 * *StemPiano IPS2* - shared between hammer and damper processing.
 * *Hammer Firmware* - unique to the hammer processing.
@@ -133,6 +143,12 @@ Four options as listed below. It is ok to use multiple sensor versions in the sa
 * It is ok to send a value less than 2.5 V. As low as 1.5 V should work. Lower voltages could require adjusting the settings in settings file.
 * See the following file for a detailed explanation: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/design/hps_cny70
 * If powered by the IPS mainboard, the maximum allowable current draw of each sensor board is 14 mA.
+
+### Analog Condition Equalize (ACE) Board
+
+Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/aceA00
+
+See *Assembly Manual* for installation details.
 
 ### Pedal Level Shift (PLS) Board
 

@@ -104,6 +104,46 @@ Damper keys are numbered starting at piano note A0 (0), through piano note C8 (8
 
 *Stem Piano* video showing damper wiring https://youtu.be/NmziaIYKS1g?t=167
 
+## Using the Analog Condition Equalize (ACE) Interposer Board (Optional)
+
+### Purpose of ACE If Not Using HPS Sensor Boards
+* If not using HPS sensor boards, and the custom sensor board being used in place of the HPS does not match the interface requirements. In this case, use an ACE interposer board to interface sensor to mainboard signals so that the sensor output matches the mainboard input requirements.
+
+### ACE Optional Use, Independent of Sensor Board Type
+
+* It is possible (future) that an ACE interposer board could improve the performance of sensor signals.
+* The ACE interposer board simplifies wiring connections. This is a useful purpose for an ACE even if using the HPS sensor boards. If using ACE A for this with HPS then do not solder on the ACE A resistors.
+* Here is another case where the ACE interposer board could be useful, even if using the HPS sensor boards. This is the case for if unsure about HPS R2 value. An option is to not install R2 on the HPS circuit boards. Use the ACE resistors instead. The advantage of this approach is that changing R2 requires replacing 6 ACE boards instead of replacing 88 HPS boards.
+
+### ACE General Information
+
+ACE comes in several versions. Presently one version is done: ACE A. This version is a set of load resistors.
+
+Each ACE A connects to 16 sensors. A total of six ACE A interposer boards are required for 88 sensors (88 piano keys).
+
+See the hardware source readme for details on each board. The values in parts list at this directory are for example. Select resistor values according to the requirements to match the custom sensor being used in place of HPS sensors.
+Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/aceA00
+
+### Sensor Connections with ACE
+
+When using an ACE interposer board, connect wires to sensors exactly as described above for the case without ACE interposer boards.
+
+### ACE Assembly Pictures
+
+Below is a picture of ACE connection to IPS 2.0 main board. The ACE snaps into place. 
+
+![aceA00_connection0](pictures/aceA00_connection0.jpg)
+
+Picture of ACE connection next to a location without the ACE interposer board.
+![aceA00_connection3](pictures/aceA00_connection3.jpg)
+
+The ACE A interposer can also be used to simplify connecting sensor wires to the IPS 2.0 mainboard. In this case, if the load resistors are not required, simply do not install them. Without installing resistors, the ACE A is a straight-through wire connection. Without resistors installed, it does not change the signal values.
+
+The advantage of using ACE A in this way is that the wiring can be done separate from the main board and then sets of 16 wires snap into place.
+
+![aceA00_connection1](pictures/aceA00_connection1.jpg)
+![aceA00_connection2](pictures/aceA00_connection2.jpg)
+
 ## Connecting Pedal Signals
 
 ### Without PLS (Pedal Level Shift)

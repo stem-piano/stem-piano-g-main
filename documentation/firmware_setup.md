@@ -14,7 +14,7 @@ See https://www.pjrc.com/ for instructions related to the Teensy 4.1 Arduino set
 
 The display is optional. The firmware default is not including the display.
 
-Go to the manufacturer web site and follow instructions for installing Arduino libraries. The manufacturer is listed in the IPS2 part file. Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/hardware/releases/ips20/ips20_bill_of_materials.txt
+Go to the manufacturer web site and follow instructions for installing Arduino libraries. The manufacturer is listed in the IPS2 part file. Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/hardware/releases/ips20/ips20_bill_of_materials_0.txt
 
 Adafruit 2.8" TFT display and Teensy library conflict:
 * The Adafruit 2.8" TFT display requires an AdaFruit library for the SD card that conflicts with the library for the SD card on the Teensy.
