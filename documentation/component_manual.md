@@ -95,6 +95,8 @@ Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/rel
 
 In this directory are the files needed for PCB fabrication and a list of all components for the board.
 
+If planning to use passive pedals, solder into place R23, R25, and R28. If pedals control the voltage and meet the HPS interface specification, then do not install the resistors. Most pedals are passive and require the resistors. In the future a jumper will be provided so can support passive or active pedals without needing to change resistors (https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues/52).
+
 The Teensy 4.1 processor removably connects to the IPS PCB.
 
 ### Six Channel Analog (SCA) PCB
@@ -154,9 +156,11 @@ See *Assembly Manual* for installation details.
 
 Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/pls00
 
-This small circuit board connects on top of pedal header J46. Adjusts the pedal voltage as explained in this logged issue - https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues/26.
+This small circuit board connects on top of pedal header J46. The PLS board is needed if pedal resistors R23, R25, and R28 are installed. Most pedals are passive and require installing these resistors and therefore for most pedal applications the PLS board is recommended.
 
-The piano will function without this board. The downside of not using this board is that the pedal voltage exceeds the maximum input voltage of the analog-to-digital converter (ADC) with respect to the voltage reference level.
+The PLS board adjusts the pedal voltage as explained in this logged issue - https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues/26.
+
+The piano will function without the PLS board. The downside of not using this board is that the pedal voltage exceeds the maximum input voltage of the analog-to-digital converter (ADC) with respect to the voltage reference level.
 
 Instructions for attaching PLS are in the *Assembly Manual*.
 

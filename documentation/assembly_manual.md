@@ -157,7 +157,7 @@ Connect jumper wires (short ribbon cable will work) as shown in figure for the I
 ### With PLS (Pedal Level Shift)
 The next figure includes the PLS 0.0. circuit board. For illustration purposes the PLS circuit board is shown offset from J46.
 
-The purpose of PLS is level shifting the pedal signals so they stay within the analog-to-digital converter (ADC) maximum voltage. Without PLS the pedal signals may be clipped by the ADC.
+The purpose of PLS is level shifting the pedal signals so they stay within the analog-to-digital converter (ADC) maximum voltage, when the optional IPS resistors R23, R25, and R28 are installed. These resistors are needed for passive pedals. Most pedals are passive. Without PLS the pedal signals may be clipped by the ADC.
 
 ![spg_pedal_connections](diagrams/pedal_connections_with_pls.png)
 
