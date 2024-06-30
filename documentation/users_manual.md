@@ -70,10 +70,10 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * Upper switch on SCA card.
 * Not used.
 
-### sca_sw2_position1 (DYNAMIC_RANGE_SETUP)
+### sca_sw2_position1 (DYNAMIC_VELOCITY_SCALING)
 * Below sca_sw2_position2.
-* OFF = Normal piano playing.
-* ON = Velocity dynamic range setup.
+* OFF = Only apply the static velocity scaling. Do not apply an additional dynamic scaling.
+* ON = In addition to the static scaling, also apply a dynamic scaling.
 
 ### sca_sw1_position2 (FREEZE_CAL_VALUES)
 * Below sca_sw2_position1.
@@ -89,24 +89,15 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * OFF->ON = When move switch from OFF to ON, the calibration values in nonvolatile memory are deleted. Powering up with switch off may not delete.
 * ON->OFF = No effect on nonvolatile memory.
 
-## Velocity Dynamic Range Setup
+## Dynamic Velocity Scaling
 
-Each piano action is unique and will have slightly different minimum and maximum velocities.
+The piano measures hammer velocity in meters per second. Hammer velocity ranges from 0 to 5 (or higher) meters per second. This velocity must be converted to a MIDI value in range 0 to 127. Each piano action along with the *stem piano* mechanical structure is unique and will exhibit slightly different velocity ranges.
 
-If hammers swing approximately 1.75 inches, the default velocity range may work ok. If not, follow these steps below.
+In the settings file is a conversion factor. This conversion factor is always applied when converting meters per second to MIDI values.
 
-(Turn down speaker volume during these steps. Do this because if the velocity dynamic range is accidentally recorded incorrectly, MIDI output could be maximum volume. If a problem occurs, repeat the following steps until good results are obtained.)
+Additionally, *stem piano* can apply an optional dynamic scaling factor when the DYNAMIC_VELOCITY_SCALING switch is ON.
 
-* Make sure calibration is complete (see instructions below).
-* Turn the velocity dynamic range switch (sca_sw2_position1) to ON.
-* Strike several notes with maximum velocity. Select multiple keys from bass to treble.
-* Turn the velocity dynamic range switch (sca_sw2_position1) to OFF.
-
-While the sca_sw2_position1 (DYNAMIC_RANGE_SETUP) switch is ON, previous dynamic range values are used. When the switch is moved back to OFF, new values are applied.
-
-(*FUTURE*) - Velocity dynamic range values are stored in nonvolatile memory and reapplied after a power cycle. To avoid loud notes after changing the frame or sensor positions, turn on power with sca_sw1_position1 (DELETE_CAL_VALUES) in the ON position.
-
-Other scaling values are possible by editing the settings file. See [Firmware Manual](./firmware_manual.md).
+The dynamic velocity scaling factor is computed along with other calibration values as described below.
 
 ## Velocity Curve
 
@@ -131,37 +122,39 @@ A velocity curve that sounds good has dependencies to the velocity dynamic range
 
 ### Overview
 
-Each of the 88 CNY-70 sensors on the HPS circuit boards exhibits a slightly different response when measuring the hammer or damper position.
+Each *stem piano* mechanical structure, along with the piano action, is unique and exhibits a slightly different response as seen by the sensors. Additionally the sensors and other *stem piano* electronic components can introduce variability.
 
-During calibration the *stem piano* firmware measures the maximum and minimum sensor output values and applies those values to calibrate the CNY-70 sensor response in real time.
+During calibration the *stem piano* firmware measures the maximum and minimum sensor output values and applies those values to calibrate the position and (optionally) velocity values in real time.
 
 Without calibration, the piano will likely sound uneven when playing. This is similar to the situation of a poorly voiced piano. Some notes may not make any sound.
 
 ### Calibration Control with Switches
 
-When sca_sw1_position2 (FREEZE_CAL_VALUES) and sca_sw1_position1 (DELETE_CAL_VALUES) switches are both OFF, the *stem piano* firmware continuously measures the CNY-70 values, updates the calibration values, and applies calibration values to the CNY-70 measurements.
+When sca_sw1_position2 (FREEZE_CAL_VALUES) and sca_sw1_position1 (DELETE_CAL_VALUES) switches are both OFF, the *stem piano* firmware continuously measures hammer positions, velocities, updates the calibration values, and applies calibration values to received signals.
 
 When sca_sw1_position1 (DELETE_CAL_VALUES) switch is ON:
 * Calibration is disabled.
-* Values stored in nonvolatile memory are deleted.
-* The velocity dynamic range stored values are deleted.
+* Position and velocity calibration values stored in nonvolatile memory are deleted.
 
 When sca_sw1_position2 (FREEZE_CAL_VALUES) switch is ON:
- * The calibration values are frozen and do not update.
- * The calibration values in nonvolatile memory are re-applied when power is cycled or when new firmware is downloaded.
+ * The position and velocity calibration values are frozen and do not update.
+ * The position and velocity calibration values in nonvolatile memory are re-applied when power is cycled or when new firmware is downloaded.
 
 LED under the TFT:
-* When all calibration values are at default the LED flashes quickly.
+* When all position calibration values are at default the LED flashes quickly.
 * When sca_sw1_position1 (DELETE_CAL_VALUES) is ON, the LED flashes quickly.
 * When a calibration value is applied to all 88 keys, the LED flashes slowly.
 * When calibration values are written to EEPROM the LED temporarily stops flashing and is ON.
+* Velocity calibration values are accurate after all position measurements include position calibration corrections. Therefore, velocity calibration values are only computed while the LED is flashing slowly.
 
 ### Calibration Best Results
 * Turn OFF sca_sw1_position1 (DELETE_CAL_VALUES).
 * Power up the piano.
 * Turn ON sca_sw1_position1 (DELETE_CAL_VALUES) then turn it OFF. This ensures old values are deleted from nonvolatile memory.
 * Firmly play each piano note once.
+* Repeat.
 * Turn ON sca_sw1_position2 (FREEZE_CAL_VALUES) to freeze calibration values and store them in nonvolatile memory.
+* After the above steps are completed, turn ON sca_sw2_position1 (DYNAMIC_VELOCITY_SCALING) if need the dynamically calculated velocity calibration value. If the fixed velocity calibration value in the settings file is sufficient then the dynamic velocity scaling is not needed.
 
 ### Calibration Debugging
 * Any excessively bad sensors might not calibrate correctly. An example is a sensor with a very low HPS output voltage when distance is small. See [./hps_testing.md](./hps_testing.md) for valid voltages.
@@ -250,7 +243,7 @@ The configuration switches, LEDs, and test points are different on the damper IP
 
 ## Caring for Stem Piano
 
-The CNY-70 have a long, but finite lifetime.
+The CNY70 have a long, but finite lifetime.
 
 Turn off piano when:
 * Not in use.
