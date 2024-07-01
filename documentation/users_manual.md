@@ -44,12 +44,9 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 
 ![](./diagrams/switches.png)
 
-### ips_sw1_position2 (DAMPER_THRESHOLD)
+### ips_sw1_position2 (UNUSED)
 * Upper left switch next to MIDI connector on the IPS circuit board.
-* OFF = Normal damper threshold.
-* ON = High damper threshold.
-* Normally in the OFF position
-* Can use to debug dampers not releasing.
+* Not used.
 
 ### ips_sw1_position1 (EXTERNAL_DAMPER_BOARD)
 * Below ips_sw1_position2
