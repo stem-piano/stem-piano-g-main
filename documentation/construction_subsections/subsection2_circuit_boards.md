@@ -26,9 +26,9 @@ Verify the manufacturer can make the boards as designed. If changes are needed, 
 
 * File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/ips20/ips20_gerber
 
-## Send the analog board (SCA) Gerber files to the PCB manufacturer and order one board
+## Send the analog board (SCA) files to the PCB manufacturer and order one board
 
-* File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/sca00
+* File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/sca01
 
 ## Send the sensor board (HPS) Gerber files to the PCB manufacturer and order 88 boards
 
@@ -47,3 +47,13 @@ Four board options:
 ## Send the pedal level shift (PLS) Gerber files to the PCB manufacturer and order one board
 
 File location: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/pls00
+
+## Send the optional analog condition equalize A (ACE A) files to the PCB manufacturer and order one board
+
+Original - This has been tested:
+
+https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/aceA00
+
+Updated - This is not yet tested:
+
+https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/aceA01

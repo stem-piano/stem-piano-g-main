@@ -19,6 +19,8 @@ Name is the IPS for Integrated Processing System. *Stem Piano* uses version 2.0 
 
 Name is the SCA for Six Channel Analog. The data acquisition board removably attaches in the center of the mainboard. *Stem Piano* uses version 0.0 of the SCA data acquisition board.
 
+Future - SCA 0.1 corrected the header silksreen labels which incorrectly show the headers on top of board in SCA 0.0. SCA 0.1 files are in repository but it has not yet been tested. The circuit board assembly instructions do show correct pictures of headers on bottom of board for SCA 0.0.
+
 Actual SCA size compared to IPS is smaller than shown in figure.
 
 ![](diagrams/sca00.png)
@@ -68,8 +70,9 @@ See *Assembly Manual* for installation details.
 
 Components when using one board to measure hammers and estimate dampers:
 * 1 IPS 2.0
-* 1 SCA 0.0
+* 1 SCA 0.0 or 0.1
 * 1 PLS 0.0
+* 6 ACE A 0.0 or 0.1 (optional)
 * 88 HPS measuring the hammer positions
 * *StemPiano IPS2* firmware running on Teensy on IPS
 * *Hammer firmware* running on Teensy on IPS
@@ -77,8 +80,9 @@ Components when using one board to measure hammers and estimate dampers:
 
 If using an additional system to measure dampers, add the following. This is a duplicate of the boards to measure hammers. The only difference is the damper firmware.
 * 1 IPS 2.0
-* 1 SCA 0.0
+* 1 SCA 0.0 or 0.1
 * 1 PLS 0.0
+* 6 ACE A 0.0 or 0.1 (optional)
 * 88 HPS measuring damper position
 * *StemPiano IPS2* firmware running on Teensy on second IPS (this is the same firmware as for hammers).
 * *Damper firmware* running on Teensy on second IPS (this is different than the hammer firmware).
@@ -101,7 +105,13 @@ The Teensy 4.1 processor removably connects to the IPS PCB.
 
 ### Six Channel Analog (SCA) PCB
 
+Original - this has been tested:
+
 Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/sca00
+
+Corrected the header silkscreen which should be on back of board. This has not yet been tested:
+
+Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/sca01
 
 The six channel analog (SCA) card contains the data acquisition analog processing. This PCB removably connects to the IPS mainboard. In the SCA directory are the files needed for PCB fabrication and a list of all components for the board.
 
@@ -148,7 +158,13 @@ Four options as listed below. It is ok to use multiple sensor versions in the sa
 
 ### Analog Condition Equalize (ACE) Board
 
+Original - This has been tested:
+
 Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/aceA00
+
+Updated - This is not yet tested:
+
+https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/hardware/releases/aceA01
 
 See *Assembly Manual* for installation details.
 
