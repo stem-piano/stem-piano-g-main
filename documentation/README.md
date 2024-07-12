@@ -35,7 +35,7 @@
 * Help information - https://github.com/stem-piano/stem-piano-top/blob/main/HELP.md
 
 * Active problems, bugs, and lists of future enhancements (may not be complete):
-    * https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues 
+    * https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues  (this is the recommended location for new issues).
     * https://github.com/stem-piano/stem-piano-g-main/issues
 
 * How much will it cost? [./cost_estimate.md](./cost_estimate.md)

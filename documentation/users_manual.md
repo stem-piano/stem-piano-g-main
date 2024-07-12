@@ -2,7 +2,19 @@
 
 Manual for use of Stem Piano G after assembly is complete.
 
-For assembly instructions, see this document: [Assembly Manual](./assembly_manual.md)
+## Important Resources
+
+Please read the warnings: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
+
+Help it doesn't work! https://github.com/stem-piano/stem-piano-top/blob/main/HELP.md
+
+Active problems, bugs, and lists of future enhancements:
+  * https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues (this is the recommended location for new issues)
+  * https://github.com/stem-piano/stem-piano-g-main/issues
+
+For assembly instructions: [Assembly Manual](./assembly_manual.md)
+
+Read the licenses.
 
 ## Quick Start Guide Without Damper Board
 
@@ -261,16 +273,3 @@ Now even more fun begins.
 You have an open source piano and can add any features and be as creative as you wish.
 
 See the firmware/software manual for details on firmware and firmware settings: [./firmware_manual.md](./firmware_manual.md)
-
-## Important Resources
-
-* Please read the warnings and limitations: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
-
-* Help it doesn't work: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md
-
-* Active problems, bugs, and lists of future enhancements:
-    * https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues 
-    * https://github.com/stem-piano/stem-piano-g-main/issues
-
-## Users Manual, Select Change History
-* Add storing calibration values.
