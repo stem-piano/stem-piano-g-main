@@ -2,6 +2,8 @@
 
 Manual for use of Stem Piano G after assembly is complete.
 
+For assembly instructions, see this document: [Assembly Manual](./assembly_manual.md)
+
 ## Quick Start Guide Without Damper Board
 
 For easiest quick start, first get the system working without a separate damper board. Add the damper board later.

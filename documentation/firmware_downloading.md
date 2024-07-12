@@ -4,22 +4,22 @@
 
 A USB cable connects from an external computer to the Teensy 4.1 processing system.
 
-The USB cable has two purposes:
+The USB cable has three purposes:
 - Send firmware from computer to the Teensy 4.1
-- Provide +5 volt power from a computer to the Teensy and from there to all *stem piano* circuit boards.
+- Provide +5 volt power from a computer to the Teensy and all *stem piano* circuit boards.
 - Serial monitor connection.
 
 When 8 or less HPS are connected to the IPS mainboard, the computer can probably deliver enough current for all *stem piano* circuits through the USB cable.
 
 With a full 88 sensor setup, the computer probably cannot deliver enough current for all *stem piano* circuits through the USB cable.
 
-When the computer cannot deliver enough current, the IPS board has a +5 volt power input, J1. Use this input for providing power to the *stem piano* circuit boards.
+When the computer cannot deliver enough current, the IPS board has a +5 volt power input, J1. However, using an external +5 volt power at J1 presents a problem because the USB cable is also sending +5 volts power.
 
-However, using an external +5 volt power at J1 presents a problem because the USB cable is also sending +5 volts power. Connecting both power inputs at the same time is not good.
+See the warnings document in the *DIY-Grand-Digital-Piano* repository:
 
-See the warnings document in the *DIY-Grand-Digital-Piano* repository for additional details: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
+https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
-## USB Cable And +5 Volt Power - Solutions
+## USB Cable And +5 Volt Power - Solution
 
 See figure of power connections below.
 
@@ -29,11 +29,10 @@ One option is to never connect the external +5 volt power source (at J1) and the
 
 The problem with this option is that powering all 88 sensors requires using the external +5 volt power source. In this case, the USB is unusable. So, the Teensy cannot be reprogrammed.
 
-For sending firmware to the Teensy while also connected to the external +5 volt power input at J1, the Teensy manufacturer's website https://www.pjrc.com/ explains solutions to this problem. Summary:
+For sending firmware to the Teensy while also connected to the external +5 volt power input at J1, the Teensy manufacturer's website https://www.pjrc.com/ explains solutions to this problem https://www.pjrc.com/teensy/external_power.html
 
-(1) Cut the +5 volt circuit on the Teensy processor.
+The recommended option is cutting the "5V" pad.
 
-(2) Create a special USB cable with the power wire cut. Keep track of this cable and always use it with *stem piano*.
 
 ## Initial Download
 
