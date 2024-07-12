@@ -1,11 +1,11 @@
 # Stem Piano G - Prepare
 
 Read all manuals as well as these resources at the *DIY-Grand-Digital-Piano* repository.
-* Help file: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md
-* Warning file: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
+* Help file: https://github.com/stem-piano/stem-piano-top/blob/main/HELP.md
+* Warning file: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
 Read all issues, especially anything that could impact hardware decisions (these may not be complete):
-* https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues
+* https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues (this is the recommended location for adding new issues).
 * https://github.com/stem-piano/stem-piano-g-main/issues
 
 Get familiar with components such as the Teensy, TFT display, MIDI, Ethernet, etc.

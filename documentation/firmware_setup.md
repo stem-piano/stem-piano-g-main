@@ -69,8 +69,10 @@ Select Teensy 4.1 as the board in the board manager.
 
 Compile the project without selecting the download step.
 
-If it does not compile, see the https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md file and the repository *Issues* list. Also, check Arduino and Teensy web pages.
-
-Another source of help is the https://www.pjrc.com/ website.
+Resources if it does not compile:
+* https://github.com/stem-piano/stem-piano-top/blob/main/HELP.md
+* https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues
+* Arduino and Teensy web pages.
+* https://www.pjrc.com/
 
 If it does compile, the boards are now ready to install firmware.

@@ -30,9 +30,9 @@
 
 ## Resources
 
-* Important things to be aware of: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/WARNINGS.md
+* Please read the warnings - https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
-* Help if the piano don't work: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/HELP.md
+* Help information - https://github.com/stem-piano/stem-piano-top/blob/main/HELP.md
 
 * Active problems, bugs, and lists of future enhancements (may not be complete):
     * https://github.com/gzweigle/DIY-Grand-Digital-Piano/issues 
