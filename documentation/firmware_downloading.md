@@ -4,14 +4,15 @@
 
 A USB cable connects from an external computer to the Teensy 4.1 processing system.
 
-The USB cable has three purposes:
+The USB cable has two purposes:
 - Send firmware from computer to the Teensy 4.1
-- Provide +5 volt power from a computer to the Teensy and all *stem piano* circuit boards.
 - Serial monitor connection.
+
+Also, it can provide +5 volt power from a computer to the Teensy and all *stem piano* circuit boards.
 
 When 8 or less HPS are connected to the IPS mainboard, the computer can probably deliver enough current for all *stem piano* circuits through the USB cable.
 
-With a full 88 sensor setup, the computer probably cannot deliver enough current for all *stem piano* circuits through the USB cable.
+With a full 88 sensor setup, a computer cannot deliver enough current for all *stem piano* circuits through the USB cable.
 
 When the computer cannot deliver enough current, the IPS board has a +5 volt power input, J1. However, using an external +5 volt power at J1 presents a problem because the USB cable is also sending +5 volts power.
 
@@ -23,16 +24,11 @@ https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
 See figure of power connections below.
 
-One option is to never connect the external +5 volt power source (at J1) and the USB cable simultaneously. The IPS includes a jumper, J12, as a reminder. When the jumper is disconnected, the external +5 volt power supply is disconnected. Also, the circuit board includes warnings printed on the circuit board.
-
 ![](./diagrams/usb_power.png)
-
-The problem with this option is that powering all 88 sensors requires using the external +5 volt power source. In this case, the USB is unusable. So, the Teensy cannot be reprogrammed.
 
 For sending firmware to the Teensy while also connected to the external +5 volt power input at J1, the Teensy manufacturer's website https://www.pjrc.com/ explains solutions to this problem https://www.pjrc.com/teensy/external_power.html
 
-The recommended option is cutting the "5V" pad.
-
+The recommended option is cutting the "5V" pad. Do not connect jumper J12 or external +5V power until the "5V" pad is cut according to PJRC instructions, and verified the circuit is open with an ohmmeter.
 
 ## Initial Download
 

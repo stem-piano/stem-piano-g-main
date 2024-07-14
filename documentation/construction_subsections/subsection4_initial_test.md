@@ -89,4 +89,6 @@ As more HPS sensor boards are connected to the IPS board, the total current draw
 
 ## Disconnect the USB cable
 
-For future steps, a modified USB connection is required.
+For future steps, a modified Teensy 5V pad connection is required, following direction on PJRC website:
+
+https://www.pjrc.com/teensy/external_power.html

@@ -317,9 +317,9 @@ If using a separate damper system, a separate MIDI connection to damper IPS boar
 
 ### USB Cable to Teensy
 
-The Teensy 4.1 shorts its USB power connection and its +5 volt power pin.
+The Teensy 4.1 shorts its USB power connection and its +5 volt power pin. Cut the 5V pad on the Teensy according to the PJRC website:
 
-The PJRC Teensy 4.1 website gives details on how to modify a USB cable to remove the power wires: https://www.pjrc.com.
+https://www.pjrc.com/teensy/external_power.html
 
 ### Ethernet Cable
 
