@@ -28,7 +28,7 @@ See figure of power connections below.
 
 For sending firmware to the Teensy while also connected to the external +5 volt power input at J1, the Teensy manufacturer's website https://www.pjrc.com/ explains solutions to this problem https://www.pjrc.com/teensy/external_power.html
 
-The recommended option is cutting the "5V" pad. Do not connect jumper J12 or external +5V power until the "5V" pad is cut according to PJRC instructions, and verified the circuit is open with an ohmmeter.
+Do not connect jumper J12 or external +5V power until the "5V" pad is cut according to PJRC instructions.
 
 ## Initial Download
 
