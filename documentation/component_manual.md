@@ -295,7 +295,7 @@ Each connection needs 3 wires. Hammer sensors require 3 wires * 88 keys = 264 wi
 
 ![](./pictures/ribbon_cable.jpg)
 
-* Standard breadboard ribbon cable will work.
+* Standard breadboard ribbon cable will work. Tests indicate that standard ribbon cable can introduce coupling errors in the sensor signal output as high as 5% on adjacent keys. Typical errors are 0% to 3% depending on the ribbon cable arrangement. One approach for reducing errors is interleaving ground signals. Or, physically separating the cables.
 
 * Keep the cables as short as possible.
 

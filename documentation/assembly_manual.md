@@ -80,6 +80,8 @@ If the hammer shank wood is not strongly reflective, place white stickers on eac
 
 Connect each HPS sensor to the correct IPS location using the ribbon cable.
 
+Tests indicate that standard ribbon cable can introduce coupling errors in the sensor signal output as high as 5% on adjacent keys. Typical errors are 0% to 3% depending on the ribbon cable arrangement. One approach for reducing errors is interleaving ground signals. Or, physically separating the cables.
+
 ![spg_hammer_connections](diagrams/hammer_connections.png)
 
 Hammers are numbered starting at piano note A0 (key number 0), through piano note C8 (key number 87) in the first figure. Connect each set of three pins (power, ground, and signal) to the same three pins on each of the 88 sensors boards.
