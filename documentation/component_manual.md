@@ -62,6 +62,12 @@ See *Assembly Manual* for installation details.
 * *Hammer Firmware* - unique to the hammer processing.
 * *Damper Firmware* - optional - unique to the damper processing.
 
+### 1 - Teensy 4.1
+
+* Cut the 5V pad on Teensy 4.1 per instructions at PJRC website before installing the Teensy processor. https://www.pjrc.com/teensy/external_power.html
+
+* See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
+
 ### 1 - Piano action or an innovative mechanical musical instrument interface.
 
 ![](pictures/piano_action.jpg)
@@ -229,8 +235,7 @@ Picture showing the +5 volt output next to the IPS barrel jack connector.
 ![](./pictures/five_volt_supply_0.jpg)
 
 Requirements:
-* At least 3.5 amp output capability when connecting to both the hammer and damper boards.
-* At least 1.75 amp output capability when using a single board.
+* At least 1.75 amp output capability for each circuit board.
 * Safety protection: overcurrent, short circuit, overvoltage, thermal limits, etc.
 * Connects to a standard breadboard-style DC power input jack on the circuit boards.
 

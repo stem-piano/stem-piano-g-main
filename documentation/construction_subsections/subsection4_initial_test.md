@@ -6,11 +6,13 @@ Video links in documentation below are to the *stem piano* historical progress v
 
 The piano action and frame are not required for this step.
 
-Do not connect the +5V external power supply for this step. The board is powered through the Teensy 4.1 USB cable.
-
-Do not install jumper J12 on IPS2 printed circuit board.
-
 Make sure all DIP switches on IPS2 are in their off position. If switches were not installed, this step is not necessary.
+
+Power connections:
+
+* Cut the 5V pad on Teensy 4.1 per instructions at PJRC website before installing the Teensy processor. https://www.pjrc.com/teensy/external_power.html
+
+* See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
 ## Connect a single HPS board
 
@@ -32,11 +34,11 @@ Modify the firmware settings to disable unused inputs.
 
 ## Connect USB to Teensy and power up
 
-Connect a USB cable to the Teensy. Because the board is powered through the USB cable, use a normal USB cable without modification (later steps may require modifying a cable to remove the power connections).
+Connect a USB cable to the Teensy.
 
 Connect the opposite side of the USB cable to a computer.
 
-The IPS, SCA, and a single HPS board are now powered!
+Power up the IPS, SCA, and a single HPS board.
 
 ## Download
 
@@ -84,11 +86,3 @@ Power up.
 If at this step, congratulations. See *stem piano* video https://youtu.be/M1_228-ClXM?t=321.
 
 Test other HPS boards and other IPS input pins. Test several simultaneously.
-
-As more HPS sensor boards are connected to the IPS board, the total current draw of the system increases. Do not connect more than eight HPS while powering the system with the USB cable to Teensy processor.
-
-## Disconnect the USB cable
-
-For future steps, a modified Teensy 5V pad connection is required, following direction on PJRC website:
-
-https://www.pjrc.com/teensy/external_power.html
