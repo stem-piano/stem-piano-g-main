@@ -64,6 +64,8 @@ See *Assembly Manual* for installation details.
 
 ### 1 - Teensy 4.1
 
+Before installing:
+
 * Cut the 5V pad on Teensy 4.1 per instructions at PJRC website before installing the Teensy processor. https://www.pjrc.com/teensy/external_power.html
 
 * See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md

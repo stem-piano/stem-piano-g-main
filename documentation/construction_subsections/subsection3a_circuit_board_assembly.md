@@ -91,6 +91,12 @@ Instructions *coming soon*.
 
 Purchase a Teensy that includes pins
 
+Before installing:
+
+* Cut the 5V pad on Teensy 4.1 per instructions at PJRC website before installing the Teensy processor. https://www.pjrc.com/teensy/external_power.html
+
+* See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
+
 The Teensy is socketed. It should snap into place.
 
 ![](../pictures/ips_with_parts_and_Teensy.jpg)
