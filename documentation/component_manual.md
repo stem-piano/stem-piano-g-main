@@ -148,6 +148,7 @@ Four options as listed below. It is ok to use multiple sensor versions in the sa
     * More expensive.
     * Adjusting the trimming resistor is time consuming and difficult to set accurately.
     * The absolute maximum allowed current of an HPS is 14 mA. When adjusting the trimmer, must measure the current to make sure that it never exceeds 14 mA. The HPS 0.7 documentation (see link above) includes an example of test results for an HPS 0.7. The test results include current as function of trimmer resistor position for a randomly selected CNY70. These test results indicate that when the trimmer in its default position (100 ohms), the current is in the 12 mA range. Increasing the resistance (lowering the output voltage) decreases the current.
+    * Documentation elsewhere for current input of circuit boards assumes HPS 0.4 or HPS 0.8.
 * With respect to current, if all HPS 0.7 trimmer resistors are set at 130 ohms, then the HPS 0.7 is equivalent to the HPS 0.8 (HPS 0.8: r1 = 180 ohms; HPS 0.7: r1=50 + r_trimmer=130 => 180 ohms). Approximately one full trimmer screw turn (360 degree) counterclockwise, from the default 100 ohm position, gets the resistor close to 130 ohms. Check with ohmmeter.
 
 (3) HPS 0.4
@@ -237,7 +238,7 @@ Picture showing the +5 volt output next to the IPS barrel jack connector.
 ![](./pictures/five_volt_supply_0.jpg)
 
 Requirements:
-* At least 1.75 amp output capability for each circuit board.
+* At least 1.75 amp output capability for each circuit board (current value is for when using HPS 0.4 or HPS 0.8 as sensors).
 * Safety protection: overcurrent, short circuit, overvoltage, thermal limits, etc.
 * Connects to a standard breadboard-style DC power input jack on the circuit boards.
 
