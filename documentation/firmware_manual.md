@@ -61,7 +61,20 @@ Everything within this if() statement runs at the ADC sample rate.
 
 ## Damper - Settings and Runtime
 
-*documentation will be added in the future*
+The two important firmware files are
+* The settings file: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/firmware/releases/ips2_damper/damper_settings.cpp
+* The runtime file: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/firmware/releases/ips2_damper/src_damper.cpp
+
+### Damper Settings: damper_settings.cpp
+
+To change a setting:
+* Modify the value in downloaded code.
+* Compile the firmware using Arduino software. See [./firmware_setup.md](./firmware_setup.md)
+* Download the firmware to the Teensy. See [./firmware_downloading.md](./firmware_downloading.md).
+
+The damper IPS circuit board sends damper position values to the hammer IPS circuit board using CAN bus (see https://en.wikipedia.org/wiki/CAN_bus). The hammer IPS circuit board processes the damper values, combines with hammer position values, and sends results using MIDI. The damper processing is simpler than the hammer processing. Therefore, the settings file is smaller.
+
+The setting called adc_sample_period_microseconds must be the same as for the hammer setting.
 
 ## Software
 

@@ -48,7 +48,7 @@ The quick start setup does not include an Ethernet connection or TFT display opt
 
 During normal operation, the Teensy USB is not required and should not be connected. See [./firmware_downloading](./firmware_downloading.md) for information on the USB cable.
 
-## Configuration Switches
+## Configuration Switches 
 
 Move switch position with a thin wood or plastic utensil. Use something nonconductive.
 * Moving switch to right is OFF
@@ -62,10 +62,14 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * Upper left switch next to MIDI connector on the IPS circuit board.
 * Not used.
 
-### ips_sw1_position1 (EXTERNAL_DAMPER_BOARD)
+### ips_sw1_position1 (EXTERNAL_DAMPER_BOARD or ETHERNET_SEND_KEY)
 * Below ips_sw1_position2
-* OFF = No damper board. Dampers are estimated from hammer position.
-* ON = The optional external damper board is connected. Damper position is measured by the damper board and then sent to the hammer board.
+* IPS circuit board with hammer firmware - EXTERNAL_DAMPER_BOARD:
+  * OFF = No damper board. Dampers are estimated from hammer position.
+  * ON = The optional external damper board is connected. Damper position is measured by the damper board and then sent to the hammer board.
+* IPS circuit board with damper firmware - ETHERNET_SEND_KEY:
+  * Select values for Ethernet.
+  * See firmware code for details.
 
 ### ips_sw2_position2 (ENABLE_ETHERNET)
 * Below ips_sw1_position1.
@@ -81,10 +85,12 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * Upper switch on SCA card.
 * Not used.
 
-### sca_sw2_position1 (DYNAMIC_VELOCITY_SCALING)
+### sca_sw2_position1 (DYNAMIC_VELOCITY_SCALING or UNUSED)
 * Below sca_sw2_position2.
-* OFF = Only apply the static velocity scaling. Do not apply an additional dynamic scaling.
-* ON = In addition to the static scaling, also apply a dynamic scaling.
+* IPS circuit board with hammer firmware - DYNAMIC_VELOCITY_SCALING:
+  * OFF = Only apply the static velocity scaling. Do not apply an additional dynamic scaling.
+  * ON = In addition to the static scaling, also apply a dynamic scaling.
+* IPS circuit board with damper firmware - UNUSED:
 
 ### sca_sw1_position2 (FREEZE_CAL_VALUES)
 * Below sca_sw2_position1.
@@ -100,7 +106,7 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * OFF->ON = When move switch from OFF to ON, the calibration values in nonvolatile memory are deleted. Powering up with switch off may not delete.
 * ON->OFF = No effect on nonvolatile memory.
 
-## Dynamic Velocity Scaling
+## Dynamic Velocity Scaling (hammer only)
 
 The piano measures hammer velocity in meters per second. Hammer velocity ranges from 0 to 5 (or higher) meters per second. This velocity must be converted to a MIDI value in range 0 to 127. Each piano action along with the *stem piano* mechanical structure is unique and will exhibit slightly different velocity ranges.
 
@@ -110,7 +116,7 @@ Additionally, *stem piano* can apply an optional dynamic scaling factor when the
 
 The dynamic velocity scaling factor is computed along with other calibration values as described below.
 
-## Velocity Curve
+## Velocity Curve (hammer only)
 
 The *stem piano* firmware computes velocity as the continuous derivative of hammer shank position. The firmware makes no curve adjustments. In the future velocity adjustability may be added (*FUTURE*). Until then, use external MIDI software to fine-tune the velocity curve. Here is an example:
 
@@ -129,7 +135,7 @@ The *stem piano* firmware computes velocity as the continuous derivative of hamm
 
 A velocity curve that sounds good has dependencies to the velocity dynamic range results.
 
-## Calibration
+## Calibration (hammer and damper)
 
 ### Overview
 
@@ -179,11 +185,11 @@ If the sensor placement is changed, repeat the calibration process.
 
 At the front of the piano, next to the Teensy, are four LEDs. Each LED is electrically connected to a test point. The firmware drives with a Teensy pin. Here is the functionality, using names from figure above:
 
-### processing
+### processing (hammer and damper)
 
 This test point is high during Teensy main loop processing. The rate is very high and so the LED may be solidly or dimly illuminated. Can monitor with an oscilloscope for debug.
 
-### damper
+### damper (hammer only)
 
 This LED is ON when any damper is raised by pressing and holding a piano key.
 
@@ -193,7 +199,7 @@ Normally this LED is OFF when no piano keys are pressed. If LED is ON when no pi
 * not all notes have calibration values (in this case the calibration LED is flashing quickly) or
 * distances from sensors to hammer shanks are not uniform between keys.
 
-### strike
+### strike (hammer only)
 
 This LED is ON when any hammer is close to the string. When a single piano key is pressed quickly, this LED should briefly turn ON then OFF.
 
@@ -203,7 +209,7 @@ Normally this LED is OFF when no piano keys are pressed. If LED is ON when no pi
 * not all notes have calibration values (in this case the calibration LED is flashing quickly) or
 * distances from sensors to hammer shanks are not uniform between keys.
 
-### sustain
+### sustain (hammer only)
 
 This LED is ON when any of the pedals is pressed. Probably should be called 'pedal' and not 'sustain'.
 
@@ -231,7 +237,7 @@ The values are integers in range [-2^23, ..., 2^23].
 
 Select which 12 hammer shank positions are sent as follows:
 * Press and hold a single piano key.
-* Depress and release the sustain pedal.
+* Depress and release the sustain pedal (on damper board, use switch ETHERNET_SEND_KEY).
 * Release the piano key.
 * The values for the held piano key along with the 11 subsequent key values are sent.
 
@@ -248,9 +254,7 @@ The damper board requires a separate +5 volt input connection.
 
 The damper board Teensy processor is programmed separately from the hammer board Teensy processor.
 
-The damper board has its own 2.8 inch TFT display.
-
-The configuration switches, LEDs, and test points are different on the damper IPS, compared to the hammer IPS.
+The damper board has its own optional 2.8 inch TFT display.
 
 ## Caring for Stem Piano
 

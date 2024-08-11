@@ -2,6 +2,8 @@
 
 Video links in documentation below are to the *stem piano* historical progress videos on YouTube: https://www.youtube.com/@gzpiano88.
 
+The following instructions are for an IPS circuit board with the hammer firmware.
+
 ## Setup
 
 The piano action and frame are not required for this step.

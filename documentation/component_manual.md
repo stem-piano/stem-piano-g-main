@@ -11,13 +11,13 @@ Component links in documentation below are to the original project repository: h
 This section overviews the major components. Links to code and hardware are provided in subsequent details sections.
 
 ### 1 - Mainboard
-Name is the IPS for Integrated Processing System. *Stem Piano* uses version 2.0 of the IPS mainboard.
+Name is the IPS for Integrated Processing System. *Stem piano g* uses version 2.0 of the IPS mainboard.
 
 ![](diagrams/ips20.png)
 
 ### 1 - Data acquisition board
 
-Name is the SCA for Six Channel Analog. The data acquisition board removably attaches in the center of the mainboard. *Stem Piano* uses version 0.0 of the SCA data acquisition board.
+Name is the SCA for Six Channel Analog. The data acquisition board removably attaches in the center of the mainboard. *Stem piano G* uses version 0.0 of the SCA data acquisition board.
 
 Future - SCA 0.1 corrected the header silksreen labels which incorrectly show the headers on top of board in SCA 0.0. SCA 0.1 files are in repository but it has not yet been tested. The circuit board assembly instructions do show correct pictures of headers on bottom of board for SCA 0.0.
 
@@ -244,18 +244,18 @@ Requirements:
 
 ### Surge Suppressor
 
-The high voltage side of the external +5 volt power supply should connect through a surge suppressor to the higher voltage.
+The high voltage side of the external +5 volt power supply should connect through a surge suppressor to the higher voltage. This applies to both hammer and damper circuit boards.
 
 ### External Power Switch
 
-*Stem Piano* does not include a power switch. Use an external switch. Often a switch is integrated with a surge suppressor.
+*stem piano g* does not include a power switch. Use an external switch. Often a switch is integrated with a surge suppressor. This applies to both hammer and damper circuit boards.
 
 ### External Damper Pedals
 
-*Stem Piano* video explanation of the pedals and pedal requirements:
+*stem piano* video explanation of the pedals and pedal requirements:
 * https://youtu.be/9sqkgVXceJU?t=17
 
-*Stem Piano* has been tested with the following pedals:
+*stem piano g* has been tested with the following pedals:
 * Roland DP-10
 * Roland RPU-3
 
@@ -309,7 +309,7 @@ Each connection needs 3 wires. Hammer sensors require 3 wires * 88 keys = 264 wi
 
 * Keep the cables away from electrical noise sources such as the +5 volt power supply.
 
-*Stem Piano* connection example video: https://youtu.be/gNeLMGaxmG0?t=103
+*Stem piano* connection example video: https://youtu.be/gNeLMGaxmG0?t=103
 
 ### Hammer and Damper Board Connection
 
