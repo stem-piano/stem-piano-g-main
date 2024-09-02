@@ -32,7 +32,9 @@ Parts File: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/hardwa
 
 Ethernet is optional. If using Ethernet:
 
-* The 2x3 pin 2mm header is **manually** soldered onto the Teensy. See *stem piano* video https://youtu.be/M1_228-ClXM?t=182.
+* The 2x3 pin 2mm header is **manually** soldered onto the Teensy. See *stem piano* videos:
+  *  https://youtu.be/M1_228-ClXM?t=182.
+  *  https://youtu.be/tyN7v7L9VIQ?t=51
 * One of the two 2x3 pin 2mm socket headers is not soldered in place. It is stacked on the other. See same video for example.
 * If unsure about these steps, it is ok to skip Ethernet. *Stem Piano* works without Ethernet. Can add later anytime.
 
@@ -97,6 +99,8 @@ Before installing:
 
 * See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
+* *stem piano* video example (please verify with PJRC website) - https://youtu.be/tyN7v7L9VIQ?t=27
+
 The Teensy is socketed. It should snap into place.
 
 ![](../pictures/ips_with_parts_and_Teensy.jpg)
@@ -122,5 +126,7 @@ May need to solder pins onto the TFT. See figure:
 ![](../pictures/tft_pins.jpg)
 
 The TFT is socketed. It should snap into place on the IPS mainboard.
+
+*stem piano* video showing top corner modification for fit: https://youtu.be/tyN7v7L9VIQ?t=149
 
 Install the 2.8" TFT unmodified. The TFT IM1, IM2, and IM3 pins are connected to +3.3V on the IPS 2.X PCB. Therefore, these jumpers internal to the TFT should *not* be soldered together (the manufacturer website may describe soldering them together).

@@ -4,6 +4,8 @@ Video links in documentation below are to the *stem piano* historical progress v
 
 The following instructions are for an IPS circuit board with the hammer firmware.
 
+Here is a *stem piano* video with an example of initial testing before connecting to a piano action. The video shows a test sequence similar to the instructions below. https://youtu.be/tyN7v7L9VIQ?t=100
+
 ## Setup
 
 The piano action and frame are not required for this step.
@@ -15,6 +17,8 @@ Power connections:
 * Cut the 5V pad on Teensy 4.1 per instructions at PJRC website before installing the Teensy processor. https://www.pjrc.com/teensy/external_power.html
 
 * See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
+
+* *stem piano* video example (please verify with PJRC website) - https://youtu.be/tyN7v7L9VIQ?t=27
 
 ## Connect a single HPS board
 

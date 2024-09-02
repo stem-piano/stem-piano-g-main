@@ -16,11 +16,15 @@ Also, it can provide +5 volt power from an external source such as a computer.
 
 * See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
+* *stem piano* video example (please verify with PJRC website) - https://youtu.be/tyN7v7L9VIQ?t=27
+
 ![](./diagrams/usb_power.png)
 
 ## Initial Download
 
 When initially downloading firmware to the Teensy, may need to push the download button on the Teensy.
+
+*stem piano* video showing a download sequence: https://youtu.be/tyN7v7L9VIQ?t=78
 
 ## Strategy When Using Hammer and Damper Boards
 

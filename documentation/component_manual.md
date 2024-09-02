@@ -70,6 +70,8 @@ Before installing:
 
 * See: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
 
+* *stem piano* video example (please verify with PJRC website) - https://youtu.be/tyN7v7L9VIQ?t=27
+
 ### 1 - Piano action or an innovative mechanical musical instrument interface.
 
 ![](pictures/piano_action.jpg)

@@ -145,6 +145,8 @@ During calibration the *stem piano* firmware measures the maximum and minimum se
 
 Without calibration, the piano will likely sound uneven when playing. This is similar to the situation of a poorly voiced piano. Some notes may not make any sound.
 
+The following *stem piano* video shows the full calibration sequence: https://www.youtube.com/watch?v=9pCPfeUCGio
+
 ### Calibration Control with Switches
 
 When sca_sw1_position2 (FREEZE_CAL_VALUES) and sca_sw1_position1 (DELETE_CAL_VALUES) switches are both OFF, the *stem piano* firmware continuously measures hammer positions, velocities, updates the calibration values, and applies calibration values to received signals.

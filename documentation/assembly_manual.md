@@ -94,7 +94,9 @@ Hammers are numbered starting at piano note A0 (key number 0), through piano not
 
 Connecting all the sensors is very time consuming. A total of 3*88 = 264 wires are required. Gluing into sets makes the connection process much easier. See *stem piano* video: https://youtu.be/gNeLMGaxmG0?t=103.
 
-*Stem Piano* video showing wiring top view: https://www.youtube.com/watch?v=TemXGmkoc-g
+*Stem Piano* video showing wiring top view:
+* https://www.youtube.com/watch?v=TemXGmkoc-g
+* https://youtu.be/tyN7v7L9VIQ?t=135
 
 ## Connecting Damper Sensors (Optional)
 
@@ -184,6 +186,8 @@ Note that the far right pin (for ground) on the PLS socket header does not have 
 * red wire connects to any ground pin of J41.
 
 ![pls_connection](pictures/pls00_connection.jpg)
+
+*Stem Piano* video pedal wiring with PLS https://youtu.be/tyN7v7L9VIQ?t=120 
 
 ### General
 
