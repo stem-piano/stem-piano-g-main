@@ -72,6 +72,8 @@ Before installing:
 
 * *stem piano* video example (please verify with PJRC website) - https://youtu.be/tyN7v7L9VIQ?t=27
 
+* After the 5V pad on Teensy 4.1 is cut, install jumper J12 on the IPS circuit board. This jumper is located at the left of the circuit board, next to the +5V power input connector.
+
 ### 1 - Piano action or an innovative mechanical musical instrument interface.
 
 ![](pictures/piano_action.jpg)
