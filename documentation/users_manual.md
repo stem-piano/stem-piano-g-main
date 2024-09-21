@@ -30,7 +30,7 @@ The quick start setup does not include an Ethernet connection or TFT display opt
 
 2. Connect a sustain pedal to quarter inch connection as shown in figure top right.
 
-3. Connect a 6-pin serial MIDI cable from the *stem piano* to a computer.
+3. Connect a 6-pin serial MIDI cable from the *stem piano* to a computer or connect a USB cable from the serial port on the Teensy.
 
 4. Run MIDI-based software sound synthesizer software on computer.
 

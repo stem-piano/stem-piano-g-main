@@ -40,6 +40,7 @@ The following is from the *README.md* file in the *DIY-Grand-Digital-Piano* repo
     * Digital keyboard (sensors may need modification).
     * Or, can use as part of creating innovative new musical instruments.
 * Sends data via a single 5-pin serial MIDI.
+* Can send MIDI data via the USB serial connector on the Teensy 4.1 board.
 * Measures and sends hammer velocity and, optionally, damper velocity over MIDI.
 * Includes three jacks, quarter-inch, for pedals.
 * Accepts up to 96 inputs. Therefore, will work for pianos with more than 88 keys.

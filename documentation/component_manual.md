@@ -321,9 +321,9 @@ If using a separate damper board, two wires connect hammer and damper IPS boards
 
 Can use standard breadboard ribbon cable.
 
-### MIDI Cable
+### MIDI Cable (optional)
 
-Connects to the 6-pin MIDI port.
+Connects to the 6-pin MIDI port. Use for serial MIDI. Not needed for USB MIDI.
 
 If using a separate damper system, a separate MIDI connection to damper IPS board is not required.
 

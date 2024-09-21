@@ -79,7 +79,7 @@ If the serial monitor is not displaying anything, the problem could be with any 
 
 Power down.
 
-Connect a MIDI cable from IPS to a computer.
+Connect a MIDI cable from IPS to a computer. Can use either the serial MIDI port of the USB port on the Teensy.
 
 Run software on an external computer that converts MIDI to sound. Before using with *stem piano*, check that the external software is working by using an existing MIDI keyboard or source.
 

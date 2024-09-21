@@ -61,6 +61,14 @@ Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/blob/main/firmware/rel
 
 For simplest initial board bring up, it's best to not use the TFT display.
 
+## USB MIDI
+
+If using USB MIDI, select  Tools > USB Type > MIDI in the Arduino software. If this value is not changed, the firmware will not compile.
+
+If not using USB MIDI, or if the firmware is not compiling because of USB MIDI, comment out the "#define ENABLE_USB_MIDI" line in the the *midiout.h* file located here:
+
+https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/firmware/releases/StemPianoIPS2/src
+
 ## Compile
 
 Use the Arduino software.
