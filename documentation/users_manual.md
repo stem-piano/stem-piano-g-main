@@ -2,6 +2,8 @@
 
 Manual for use of Stem Piano G after assembly is complete.
 
+Most functionality is determined by the firmware. It is the intent that the following descriptions match the latest firmware. If the firmware changes, then the descriptions below (including switch configuration, calibration, and LED meaning) may change. If in doubt, check the firmware source code.
+
 ## Important Resources
 
 Please read the warnings: https://github.com/stem-piano/stem-piano-top/blob/main/WARNINGS.md
