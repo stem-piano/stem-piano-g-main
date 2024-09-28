@@ -229,6 +229,7 @@ If the damper measurement system is not installed, the hammer firmware estimates
 Link: https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/software/releases/ips2_analytics
 
 Optional Python software for acquiring and displaying data from the Ethernet connection.
+
 ## Accessory Details (No Links)
 
 ### External +5 Volt Power Supply
@@ -333,7 +334,7 @@ The Teensy 4.1 shorts its USB power connection and its +5 volt power pin. Cut th
 
 https://www.pjrc.com/teensy/external_power.html
 
-### Ethernet Cable
+### Ethernet Cable and Ethernet Switch
 
 Optionally connect to hammer IPS board. If using a separate damper system, a separate Ethernet connection to damper IPS board is not required.
 

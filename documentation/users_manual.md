@@ -64,14 +64,11 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * Upper left switch next to MIDI connector on the IPS circuit board.
 * Not used.
 
-### ips_sw1_position1 (EXTERNAL_DAMPER_BOARD or ETHERNET_SEND_KEY)
+### ips_sw1_position1 (EXTERNAL_DAMPER_BOARD)
 * Below ips_sw1_position2
 * IPS circuit board with hammer firmware - EXTERNAL_DAMPER_BOARD:
   * OFF = No damper board. Dampers are estimated from hammer position.
   * ON = The optional external damper board is connected. Damper position is measured by the damper board and then sent to the hammer board.
-* IPS circuit board with damper firmware - ETHERNET_SEND_KEY:
-  * Select values for Ethernet.
-  * See firmware code for details.
 
 ### ips_sw2_position2 (ENABLE_ETHERNET)
 * Below ips_sw1_position1.
@@ -233,20 +230,11 @@ Multiple categories of information are displayed through the Arduino serial moni
 
 ### Ethernet
 
-Every instant that the analog-to-digital converter (ADC) samples the hammer shank positions, 12 hammer position values are sent over Ethernet.
+Every instant that the analog-to-digital converter (ADC) samples the hammer shank positions, all 96 hammer position values are sent over Ethernet.
 
-The values are after normalization and after calibration.
+The values are after normalization and after calibration. The values are integers in range [-2^15, ..., 2^15-1].
 
-The values are integers in range [-2^23, ..., 2^23].
-
-Select which 12 hammer shank positions are sent as follows:
-* Press and hold a single piano key.
-* Depress and release the sustain pedal (on damper board, use switch ETHERNET_SEND_KEY).
-* Release the piano key.
-* The values for the held piano key along with the 11 subsequent key values are sent.
-
-Example software for receiving the 12 values over Ethernet:
-https://github.com/gzweigle/DIY-Grand-Digital-Piano/tree/main/software/releases/ips2_analytics
+To use Ethernet, connect an Ethernet cable to an Ethernet switch. Then, connect an Ethernet cable from the Ethernet switch to a computer.
 
 ## If Add A Damper Board (optional)
 
