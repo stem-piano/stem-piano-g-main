@@ -60,9 +60,10 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 
 ![](./diagrams/switches.png)
 
-### ips_sw1_position2 (UNUSED)
+### ips_sw1_position2 (ENABLE_TFT)
 * Upper left switch next to MIDI connector on the IPS circuit board.
-* Not used.
+* OFF = TFT displays default message. Normal piano operation.
+* ON = TFT displays maximum hammer position and other diagnostic information. MIDI is disabled. Piano does not play sound.
 
 ### ips_sw1_position1 (EXTERNAL_DAMPER_BOARD)
 * Below ips_sw1_position2
@@ -74,11 +75,11 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * Below ips_sw1_position1.
 * OFF = Ethernet is disabled. No Ethernet cable is needed.
 * ON = Ethernet is enabled. Piano will not function unless an Ethernet cable is connected.
+* When in TCP mode, switch from OFF to ON to initiate a connection.
 
-### ips_sw2_position1 (ENABLE_TFT)
+### ips_sw2_position1 (REQUIRE_TCP)
 * Below ips_sw2_position2.
-* OFF = TFT displays default message. Normal piano operation.
-* ON = TFT displays maximum hammer position and other diagnostic information. MIDI is disabled. Piano does not play sound.
+* When in TCP mode and switch is ON, the piano will continuously try to reconnect if a TCP connection is lost. The piano only is playable while an active TCP connection is established. Otherwise, it will hang and keep trying to connect.
 
 ### sca_sw2_position2 (UNUSED)
 * Upper switch on SCA card.
