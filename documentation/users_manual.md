@@ -235,7 +235,7 @@ Every instant that the analog-to-digital converter (ADC) samples the hammer shan
 
 The values are after normalization and after calibration. The values are integers in range [-2^15, ..., 2^15-1].
 
-To use Ethernet, connect an Ethernet cable to an Ethernet switch. Then, connect an Ethernet cable from the Ethernet switch to a computer.
+To use Ethernet, connect an Ethernet cable to an Ethernet switch. Then, connect an Ethernet cable from the Ethernet switch to a computer. The IP addresses are set in the settings file. Not using DHCP.
 
 ## If Add A Damper Board (optional)
 

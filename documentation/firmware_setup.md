@@ -10,6 +10,16 @@ See internet for details of installing and using the Arduino software.
 
 See https://www.pjrc.com/ for instructions related to the Teensy 4.1 Arduino setup.
 
+### Ethernet
+
+If using Ethernet.
+
+### QNEthernet
+
+Install if using QNEthernet. Not needed if using NativeEthernet.
+
+See *network.h* for the #define selecting the Ethernet library and recommendation of which library to use. The default is QNEthernet.
+
 ### Adafruit 2.8" TFT Display
 
 The display is optional. The firmware default is not including the display.
