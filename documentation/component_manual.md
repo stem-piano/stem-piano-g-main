@@ -243,9 +243,10 @@ Picture showing the +5 volt output next to the IPS barrel jack connector.
 ![](./pictures/five_volt_supply_0.jpg)
 
 Requirements:
-* At least 1.75 amp output capability for each circuit board (current value is for when using HPS 0.4 or HPS 0.8 as sensors).
+* At least 1.75 amp output capability for each circuit board ( > 1.75 amps for hammer IPS board and > 1.75 amps for damper IPS board). This current value is for when using HPS 0.4 or HPS 0.8 as sensors. When using HPS 0.6 or HPS 0.7, depending on the trimming resistor setting, the total current draw could be higher. See HPS 0.6 and HPS 0.7 documentation for more information.
 * Safety protection: overcurrent, short circuit, overvoltage, thermal limits, etc.
 * Connects to a standard breadboard-style DC power input jack on the circuit boards.
+* The *stem piano* circuit boards include LDO regulators to the analog section and decoupling capacitors at the integrated circuits, along with simple ground planes. Other than this, power is not conditioned or filtered. Therefore, for the external power supply, use a good, regulated, power supply with minimal noise and ripple.
 
 ### Surge Suppressor
 
