@@ -103,7 +103,7 @@ The state of an uninstalled switch is OFF. The piano is in normal state with all
 * Below sca_sw1_position2.
 * OFF = Calibration values are applied to signals normally.
 * ON = Disable calibration. No calibration values are applied to signals. Most likely the volume will be uneven. See below.
-* OFF->ON = When move switch from OFF to ON, the calibration values in nonvolatile memory are deleted. Powering up with switch off may not delete.
+* OFF->ON = When move switch from OFF to ON, the calibration values in nonvolatile memory are deleted. Powering up with switch on may not delete.
 * ON->OFF = No effect on nonvolatile memory.
 
 ## Dynamic Velocity Scaling (hammer only)
