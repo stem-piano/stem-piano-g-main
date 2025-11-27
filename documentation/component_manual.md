@@ -323,6 +323,9 @@ If using a separate damper board, two wires connect hammer and damper IPS boards
 Note that the CAN bus
 is polarity based (high and low). As such, the "high" sides of the bus from both boards must be connected together and identically for the low. In other words, connect the
 left pin of the J10 connector on the first IPS board with the left pin of the J10 connector on the second IPS board, and likewise for the right pins.
+Note also that the CAN bus is sensitive to electromagnetic interference. Even though at the low speeds involved for this project you may get it to work with whatever
+piece of cable you use, for noise immunity and signal integrity it would be much better to use at least a twisted pair (as a cheap-and-simple option you can simply
+twist together a two-position piece of regular ribbon cable).
 
 Can use standard breadboard ribbon cable.
 
