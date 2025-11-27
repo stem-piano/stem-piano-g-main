@@ -320,6 +320,9 @@ Each connection needs 3 wires. Hammer sensors require 3 wires * 88 keys = 264 wi
 ### Hammer and Damper Board Connection
 
 If using a separate damper board, two wires connect hammer and damper IPS boards together. Connect J10 on the hammer IPS board to J10 on the damper IPS board.
+Note that the CAN bus
+is polarity based (high and low). As such, the "high" sides of the bus from both boards must be connected together and identically for the low. In other words, connect the
+left pin of the J10 connector on the first IPS board with the left pin of the J10 connector on the second IPS board, and likewise for the right pins.
 
 Can use standard breadboard ribbon cable.
 
