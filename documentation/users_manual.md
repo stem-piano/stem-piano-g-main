@@ -249,6 +249,8 @@ The damper board Teensy processor is programmed separately from the hammer board
 
 The damper board has its own optional 2.8 inch TFT display.
 
+:warning: If using separate damper board, you must recompile the firmware for the hammer board, changing the `canbus_enable` variable form `false` to `true` in the `hammer_settings.cpp` file
+
 ## Caring for Stem Piano
 
 The CNY70 have a long, but finite lifetime.

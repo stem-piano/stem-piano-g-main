@@ -100,7 +100,12 @@ Connecting all the sensors is very time consuming. A total of 3*88 = 264 wires a
 
 ## Connecting Damper Sensors (Optional)
 
-A second IPS and SCA are required for damper sensors. Damper sensors are optional. If not using damper sensors, the damper location is estimated using the hammer sensors.
+A second IPS and SCA are required for damper sensors. If using this second board, damper sensors are required, but the second IPS/SCA pair and the corresponding damper sensors are optional.
+If not using damper sensors, the damper location is estimated using the hammer sensors.
+
+When using damper sensors, the second IPS needs to be connected to the first via the J10 connector on both boards, which uses tha CAN bus. Note that the CAN bus
+is polarity based (high and low). As such, the "high" sides of the bus from both boards must be connected together and identically for the low. In other words, connect the
+left pin of the J10 connector on the first IPS board with the left pin of the J10 connector on the second IPS board, and likewise for the right pins.
 
 Damper keys are numbered starting at piano note A0 (0), through piano note C8 (87).
 

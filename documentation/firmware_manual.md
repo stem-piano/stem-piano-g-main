@@ -43,6 +43,12 @@ Most settings are unlikely to change and are not listed here. The following sett
 
 * teensy_ip, computer_ip, udp_port - For the copy of code on computer, edit *hammer_settings.cpp* and put values into the Teensy and computer IP addresses. If not using Ethernet, any numbers are ok.
 
+:warning:
+
+:eight_pointed_black_star: If using separate IPS board for measuring the damper position must switch the `canbus_enable` form `false` to `true` in this file!
+
+:warning:
+
 ## Hammer Runtime: src_hammer.cpp
 
 The firmware consists of a Class for each major item of functionality. The firmware *src_hammer.cpp* declares and instantiates all classes.
